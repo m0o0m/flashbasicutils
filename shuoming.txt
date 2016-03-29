@@ -1,0 +1,192 @@
+每个工具提供的api.
+lib 可以随意引用,lib是工具包,必须包含的
+src 可以根据项目需要进行功能删减;
+拥有以下工具
+*************************1.0.0************************************
+=============stimuli=====================
+1.stimuli.loading  批量资源加载,拥有多种类型,分批或单独加载;
+api详见  bulkloaderHelp.CHM
+==============fzip===============
+2.com.proberston.utils 压缩文件的解压缩;
+api http://codeazur.com.br/lab/fzip/docs/deng/fzip/FZip.html(adobe 认证)
+
+=========Err api================
+3.Err,Log 日志输出;
+instance 单例获取入口
+
+addHandler(error:*, handler:Function) : void
+添加错误回调
+error:* 错误编码;在Errno 中定义
+handler:Function错误发生时执行指定函数;
+
+init(pairs:Object=null)
+批量添加编码与回调函数的对应;
+
+occur(error:*, data:*=null) : void
+触发指定错误,并传递信息;
+error:* 错误编码
+data:*=null 错误信息;
+
+===========Log api=============
+
+instance 单例获取入口
+init(config:*=null) : void
+初始化配置,支持控制台输出和游戏界面窗口输出;
+config:* 配置文档 
+{
+	name: "TraceLogger",//支持 编译工具 输出log到控制台
+	levels: "trace-debug-warn"   //trace-debug-warn   支持输出某种log;
+}
+=========CppStream=============
+
+
+  序列化和反序列化
+
+utils 基本数据类型,时间 ,数组,xml等的扩展操作;
+api详见类文件内部说明;
+
+assets 对wg相关资源的处理;
+
+
+
+===========resourceLoader api=================
+resource,loading, 加载并处理swf;
+loading???
+
+load(loaderList:Array, progressCallback:Function, completeCallback:Function):void
+开始加载资源;
+loaderList:Array =  [ResourceLoaderData],
+progressCallback:Function
+加载进度回调函数
+completeCallback:Function
+加载完成后回调函数
+
+getClass(className:String, keyName:String = ""):Class
+获取名称为 className 的class;
+className:String class的名称
+keyName:String key值;对应注册的swf,一般为swf的名称,也可以在load()的时候指定;
+getLoadData(path:String, key:String=""):ResourceLoaderData
+返回一个swf路径和此资源的 key的对应;
+=============mvc=================
+
+mvc 的结构
+板块之间的沟通,(通讯模式决定了板块的实现方式)
+1.提供api
+2.注册回调函数
+都需要引用对方,或对方的管理类;当对方被删除会产生影响,对方被修改,可能产生影响
+3.抽象出消息通知模块,发送消息,传递数据,在删除任何一方都不会造成影响;删除是指代码删除;
+4.创建单例管理层级,模块内的模块内单例管理,模块之间的总和模块管理类处理;
+
+//结构的 基本功能
+view
+视图工厂,创建视图实例,存储视图实例注册的操作事件回调函数; 响应消息,执行对应的回调函数
+view实例
+注册通讯回调函数在data中,发送操作事件通知消息给view.加载相对应swf,处理具体业务逻辑,
+data
+数据工厂,创建各数据处理实例,存储view实例注册的通讯回调函数; 响应消息,执行对应的回调函数
+data实例
+注册通讯回调函数在server中,发送通讯通知消息给data;计算和转换相关数据以便各视图使用;
+server
+存储data实例注册的通讯回调函数,响应服务器通讯,执行data的响应;
+Message
+socket 通讯格式;
+URI 
+管理资源路径;
+
+/*====*/
+修改:
+mvcmanger
+实例化 view,data,control
+
+mvc模式的核心问题是消息机制的实现方式,实现方式确定了m和v之间的沟通方式,
+
+notication
+消息工厂,消息实例一次使用,使用后消除;存储消息常量,存储对应消息类型注册的实例;
+notication实例
+可以执行一些逻辑,可以是简单的基本对象保存data,在notifyevent的时候创建;
+
+消息分为三种,
+registerDataEventHandler  响应数据变更事件广播
+registerEventHandler	响应视图事件广播
+registerMessageHandler	响应通讯事件广播
+
+发送消息行为的实现,
+controller可以发送任意消息,ICommand类型
+view 发送 view注册的消息;event  ICommand类型
+data发送 data中注册的消息;dataevent ICommand类型
+
+server发送 server中注册的message消息 自定义类型,并由服务器返回消息触发;
+
+
+消息通讯方式,各个模块,都可以设置消息监听和发送;
+根据依赖关系,每个模块是否需要关心其它模块的状态;
+根据每个项目的特殊需要,确定着重处理的模块;
+
+减少模块之间的关联,在对于模块的增删修改操作不影响其它模块的完整性;
+增加功能实现的便利性,功能的增删改的便利性,项目的可读性;
+根据项目的特性,确定使用方式,减少不必要的代码,依照各模块之间的关系,确定是否直接引用其它模块,减少代码的体积;
+====================场景=========================
+scene
+
+1.通过scedule 管理时间,每一帧的执行动作;根据enterframe事件计算每一帧的具体时间;
+2.镜头的操作由camera控制,实现 ontick 和onFrame;将需要操作的显示对象添加到镜头的cameraStage  sprite中;
+		
+3.camera 板块 		控制场景的操作;
+4.scene板块 			建立场景容器
+5.elments板块		具体显示对象 的代理
+6.avtars板块			具体的显示对象
+
+
+需要初始化的模块  无顺序标注;
+scheduler
+camera
+uri
+stage
+
+*******************2.0.0*******************************
+====================场景=========================
+1.camera 板块 		控制场景的操作;
+2.scene(basics)板块 	建立场景容器
+3.elments板块		具体显示对象 的代理
+4.avtars板块			具体的显示对象
+5.astar板块			a*寻路
+6.loading			封装了各种资源的加载,使用,管理的功能;part部分会大量使用;
+7.avtars.part		avtars的组成部分;
+
+整个场景,基于一个模式,
+schedule定时刷新,
+camera 计算位移,
+elments 执行onframe,赋值显示对象坐标等
+
+建立basics后,只有场景注册在schedule中,场景作为代理(显示对象容器),逐层刷新至elments;
+场景容器会根据配置文档,根据不同的layers,由layers解析并生成和显示对应的elments;
+
+
+*********************2.1.0********************************
+=================定时器的使用比较================
+方法一:
+四处注册到schedule中,
+1.mvctimer中,刷新_view.frameProcess(); 对view做个定时器;
+2.将camera添加进去,定时计算位移量;
+3.BasicAnimatedViewElement中,将所有继承此类 的场景类添加进去,场景中包含所有的elements;
+建立basics后,只有场景注册在schedule中,场景作为代理(显示对象容器),逐层刷新至elments;
+场景容器会根据配置文档,根据不同的layers,由layers解析并生成和显示对应的elments;
+
+方法二:
+一处注册到schedule中,
+1.mvctimer中,_data.frameProcess();
+			_ctrl.frameProcess();
+			_view.frameProcess();可以计算view界面打开 时的动画效果;
+			定时刷新三个模块的数据;
+对于场景的定时,在mapsrite中定义,场景继承此类,并且一次只能出现一个场景;定时器响应函数updateFrame(),这里定时器尽量不用timer,最好用enterframe计算;
+刷新_playerList,_monsterList,_npcList,_player,map等显示对象;
+====================寻路方法的比较================
+1.通过建立不可行走的区域,预检测player下一步到达Point与不可行走区域的fixel32,当遇到不可走的区域边缘时,停止行走;此方法不支持路径计算,适合外围包围式的不可行走区域;
+2.通过A*寻路,将地图分割(仅数据上的分割也可以)成若干网格,每个网格设定可走不可走属性,然后计算路径;
+================player,npc,monster,地图图片,场景特效=====================
+简单加载,无功能设计,待补充
+=============公式模拟器=================
+三角函数
+地图场景运动
+A星寻路
+

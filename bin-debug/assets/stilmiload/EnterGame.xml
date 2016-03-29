@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--进入游戏 未加载配置时所需的信息-->
+<lang>
+<langTypes>ru,zhs,en</langTypes><!--语言种类-->
+<defaultLang>en</defaultLang><!--默认语言--> 
+
+<i18nSource>
+	<path>EnterGameLang.xml</path>
+	<path>RoleChoose.xml</path>
+	<path>icons/logo/logo.swf</path>	
+	<path>map/town/105/small.swf</path>		
+	<path>common/common.swf</path>
+	<path>war/BattleCommonResource.swf</path>
+	<path>panels/RoleChoose.swf</path>
+	<path>panels/Toolbar.swf</path>
+	<path>panels/DelayMessage.swf</path>
+	<path>panels/BattleResultComp.swf</path>
+	<path>war/BattleCommonResource.swf</path>
+	<path>panels/NpcDialogComp.swf</path>
+</i18nSource> 
+</lang>

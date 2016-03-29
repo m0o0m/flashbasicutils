@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?><map id="101" name="Gold Isle" type="1" seaColor="5361298" seaColorForBattle="1347668" isRoleUnderSea="1" centerMap="101">
+  <mapImgPath>file:///C:/Users/user/Documents/mapEdit/imgLib/%e6%96%b0%e6%89%8b%e6%9d%911/%e6%96%b0%e6%89%8b%e6%9d%911.png</mapImgPath>
+  <mapMaxWidth>2700</mapMaxWidth>
+  <mapMaxHeight>1800</mapMaxHeight>
+  <mapWidth>90</mapWidth>
+  <mapHeight>60</mapHeight>
+  <gridWidth>30</gridWidth>
+  <gridHeight>30</gridHeight>
+  <gridTypeList>eNq9UcENhDAMS8WD+3WBkzpKFzup3GaM0hH65IGaS+LQcgsQqWCljnEM0TN1LAOeacDOo82c5ZEA
+pc0clMucduaoCsxltyuq8vrKSU6WwyDHDkYTKAM6uEFC5UUjUQd5F+hy1DOGBbZi8tl82HAx+2bW
+LBG8rA7rhG5Ua4M5XzKPFKDm5FsMLvzBl0xgHddz/h7YOdttav3bUQ9HuNKlFpGS8jLIAXsqY7l+
+02ESdfWUpGytt6m+6On6AU+Wkw8=</gridTypeList>
+  <gridShadowList>64,7/64,8/63,9/64,9/65,9/66,9/62,10/63,10/64,10/65,10/66,10/57,11/58,11/59,11/60,11/61,11/62,11/63,11/64,11/65,11/66,11/67,11</gridShadowList>
+  <floaters moduleIds="3100001-3100002-3100003-3100004-3100005-3100006-3100007-3100008" moduleNum="3"/>
+  <centraMap id="101"/>
+  <isCentre id="1"/>
+  <island>
+    <item imgPath="9112001_3_2.png" underSea="1" posX="641" posY="957" width="467" height="676"/>
+    <item imgPath="9112001_1_1.png" underSea="1" posX="1267" posY="234" width="639" height="454"/>
+    <item imgPath="9112001_1_3.png" underSea="1" posX="1292" posY="688" width="614" height="632"/>
+    <item imgPath="9112001_2_1.png" underSea="1" posX="789" posY="215" width="520" height="279"/>
+    <item imgPath="9112001_2_2.png" underSea="1" posX="324" posY="211" width="465" height="283"/>
+    <item imgPath="9112001_2_4.png" underSea="1" posX="322" posY="494" width="467" height="453"/>
+    <item imgPath="9112001_2_3.png" underSea="1" posX="789" posY="494" width="516" height="448"/>
+    <item imgPath="9112001_1_2.png" underSea="1" posX="1906" posY="213" width="514" height="475"/>
+    <item imgPath="9112001_3_1.png" underSea="1" posX="1108" posY="949" width="478" height="612"/>
+    <item imgPath="9112001_1_4.png" underSea="1" posX="1906" posY="688" width="516" height="636"/>
+    <item imgPath="9112001_4.png" underSea="1" posX="2268" posY="1200" width="368" height="328"/>
+  </island>
+  <effect>
+    <item type="1" effectPath="7200036.swf" posX="1310" posY="1444" width="71" height="67"/>
+    <item type="1" effectPath="7200040.swf" posX="1914" posY="651" width="70" height="70"/>
+    <item type="1" effectPath="7200004.swf" posX="1916" posY="713" width="26" height="48"/>
+    <item type="1" effectPath="7200035.swf" posX="1664" posY="697" width="38" height="28"/>
+    <item type="1" effectPath="7200037.swf" posX="1990" posY="986" width="110" height="118"/>
+    <item type="1" effectPath="7200004.swf" posX="775" posY="461" width="26" height="48"/>
+    <item type="1" effectPath="7200005.swf" posX="987" posY="619" width="34" height="63"/>
+    <item type="1" effectPath="7200005.swf" posX="1106" posY="1143" width="34" height="63"/>
+    <item type="1" effectPath="7200004.swf" posX="1283" posY="1092" width="26" height="48"/>
+  </effect>
+  <effect/>
+  <npcs>
+    <npc type="1" id="801004" ai="0" ltx="52" lty="21" rbx="52" rby="21" num="0" time="0" direct="0" underSea="1" params="" posx="1582" posy="655"/>
+    <npc type="1" id="801005" ai="0" ltx="57" lty="33" rbx="57" rby="33" num="0" time="0" direct="0" underSea="1" params="" posx="100" posy="100"/>
+    <npc type="1" id="801006" ai="0" ltx="63" lty="48" rbx="63" rby="48" num="0" time="0" direct="0" underSea="1" params="" posx="100" posy="200"/>
+    <npc type="1" id="801001" ai="0" ltx="25" lty="26" rbx="25" rby="26" num="0" time="0" direct="0" underSea="1" params="" posx="762" posy="781"/>
+    <npc type="1" id="801003" ai="0" ltx="43" lty="41" rbx="43" rby="41" num="0" time="0" direct="0" underSea="1" params="" posx="1311" posy="1240"/>
+    <npc type="1" id="801002" ai="0" ltx="30" lty="42" rbx="30" rby="42" num="0" time="0" direct="0" underSea="1" params="" posx="912" posy="1281"/>
+  </npcs>
+  <transferPoints>
+    <transferPoint id="900008" ai="0" ltx="45" lty="6" rbx="45" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+  </transferPoints>
+  <monsterTeams>
+    <monsterTeam id="110103" ai="1" ltx="73" lty="38" rbx="73" rby="38" num="1" time="1" direct="0" underSea="1" params=""/>
+    <monsterTeam id="110102" ai="1" ltx="41" lty="53" rbx="41" rby="53" num="1" time="1" direct="0" underSea="1" params=""/>
+    <monsterTeam id="110101" ai="1" ltx="13" lty="41" rbx="13" rby="41" num="1" time="1" direct="0" underSea="1" params=""/>
+  </monsterTeams>
+  <reviveArea ltx="10" lty="25" rbx="10" rby="25" underSea="1" params=""/>
+  <birthArea ltx="11" lty="25" rbx="11" rby="25" underSea="1" params=""/>
+</map>

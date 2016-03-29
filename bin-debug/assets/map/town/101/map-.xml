@@ -1,0 +1,441 @@
+<?xml version='1.0' encoding='UTF-8'?><map id="103" name="测试" type="1" seaColor="0" seaColorForBattle="0" isRoleUnderSea="1" centerMap="110">
+  <mapImgPath>title</mapImgPath>
+  <mapMaxWidth>4215</mapMaxWidth>
+  <mapMaxHeight>1665</mapMaxHeight>
+  <mapWidth>140</mapWidth>
+  <mapHeight>110</mapHeight>
+  <gridWidth>30</gridWidth>
+  <gridHeight>30</gridHeight>
+  <gridTypeList>eNpjYBgFo2AUjIJRMApGwYAAAAeFAAE=</gridTypeList>
+  <gridShadowList/>
+  <floaters moduleIds="11" moduleNum="1"/>
+  <centraMap id="103"/>
+  <isCentre id="1"/>
+  <island>
+    <item imgPath="0.gif" underSea="1" posX="0" posY="0" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="0" posY="0" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1134" posY="85" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1013" posY="87" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="936" posY="92" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1305" posY="94" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="895" posY="99" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="867" posY="116" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="758" posY="116" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="777" posY="116" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="803" posY="117" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="572" posY="117" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="707" posY="119" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="729" posY="119" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="691" posY="120" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="636" posY="122" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="661" posY="122" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="593" posY="126" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="839" posY="131" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1365" posY="143" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1031" posY="177" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="940" posY="237" width="64" height="32"/>
+    <item imgPath="7200057.swf" underSea="1" posX="587" posY="238" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="581" posY="238" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="933" posY="246" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1299" posY="256" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="976" posY="271" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="964" posY="281" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="827" posY="287" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="919" posY="294" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="973" posY="302" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="925" posY="309" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1018" posY="317" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1106" posY="318" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="988" posY="326" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="995" posY="347" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="934" posY="352" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1262" posY="353" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="934" posY="357" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1397" posY="358" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1007" posY="359" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="856" posY="373" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1160" posY="386" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="971" posY="395" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1099" posY="396" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="994" posY="397" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1414" posY="400" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="777" posY="405" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="763" posY="417" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1043" posY="431" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1184" posY="459" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="789" posY="479" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="846" posY="489" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="921" posY="492" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="984" posY="492" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1072" posY="492" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1260" posY="497" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1326" posY="498" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1602" posY="564" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="1502" posY="570" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="0" posY="0" width="64" height="32"/>
+    <item imgPath="7200057.swf" underSea="1" posX="1651" posY="121" width="64" height="32"/>
+    <item imgPath="7200056.swf" underSea="1" posX="1389" posY="158" width="64" height="32"/>
+    <item imgPath="7200057.swf" underSea="1" posX="1648" posY="186" width="64" height="32"/>
+    <item imgPath="7200056.swf" underSea="1" posX="1688" posY="208" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="582" posY="215" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="653" posY="256" width="64" height="32"/>
+    <item imgPath="7200057.swf" underSea="1" posX="1699" posY="288" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="582" posY="295" width="64" height="32"/>
+    <item imgPath="7200056.swf" underSea="1" posX="678" posY="314" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="651" posY="318" width="64" height="32"/>
+    <item imgPath="0.gif" underSea="1" posX="631" posY="371" width="64" height="32"/>
+    <item imgPath="7200057.swf" underSea="1" posX="1120" posY="427" width="64" height="32"/>
+    <item imgPath="7200057.swf" underSea="1" posX="1641" posY="432" width="64" height="32"/>
+    <item imgPath="7200057.swf" underSea="1" posX="854" posY="585" width="64" height="32"/>
+    <item imgPath="7200057.swf" underSea="1" posX="1087" posY="597" width="64" height="32"/>
+  </island>
+  <effect>
+    <item type="1" effectPath="7200004.swf" posX="616" posY="81" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1523" posY="256" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1515" posY="380" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1510" posY="449" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1400" posY="488" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1147" posY="536" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1061" posY="300" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="933" posY="257" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1268" posY="305" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1268" posY="211" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1411" posY="179" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1477" posY="236" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1427" posY="316" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1396" posY="381" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1353" posY="439" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1439" posY="481" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1484" posY="511" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1517" posY="529" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1565" posY="535" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1638" posY="552" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1777" posY="561" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1861" posY="567" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1727" posY="558" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1395" posY="563" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1297" posY="598" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1152" posY="613" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="979" posY="609" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="947" posY="467" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="962" posY="351" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="948" posY="262" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="985" posY="304" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="972" posY="339" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1341" posY="52" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1599" posY="341" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1197" posY="338" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1337" posY="320" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1284" posY="263" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1297" posY="307" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1428" posY="341" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1469" posY="361" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="616" posY="115" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="709" posY="259" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="855" posY="328" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1609" posY="354" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1519" posY="316" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1680" posY="383" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1556" posY="435" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1573" posY="485" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1615" posY="491" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1571" posY="409" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1635" posY="414" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1540" posY="365" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1569" posY="380" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1559" posY="315" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1610" posY="318" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1513" posY="490" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1545" posY="493" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1441" posY="292" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1480" posY="324" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1681" posY="442" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1268" posY="410" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1345" posY="446" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1388" posY="454" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1574" posY="404" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1650" posY="474" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1639" posY="523" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1625" posY="454" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1598" posY="464" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1606" posY="297" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1635" posY="251" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1644" posY="219" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1646" posY="195" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1634" posY="359" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1632" posY="417" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1609" posY="408" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1609" posY="408" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1609" posY="408" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1609" posY="408" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1609" posY="408" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1611" posY="408" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1611" posY="408" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1611" posY="412" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="616" posY="213" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="987" posY="266" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1772" posY="469" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1762" posY="479" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1725" posY="470" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1717" posY="496" width="26" height="48"/>
+    <item type="1" effectPath="7200062.swf" posX="1715" posY="406" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1718" posY="396" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1686" posY="480" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1691" posY="551" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1669" posY="643" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1516" posY="656" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1411" posY="654" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1509" posY="443" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1559" posY="400" width="68" height="97"/>
+    <item type="1" effectPath="7200004.swf" posX="1692" posY="268" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1700" posY="308" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1632" posY="450" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1610" posY="455" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1601" posY="482" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1601" posY="518" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1599" posY="554" width="26" height="48"/>
+    <item type="1" effectPath="7200062.swf" posX="1506" posY="586" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1435" posY="565" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1430" posY="508" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1604" posY="503" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1567" posY="485" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1486" posY="476" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1285" posY="490" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1231" posY="540" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1243" posY="594" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1281" posY="639" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1341" posY="643" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1343" posY="673" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="778" posY="536" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1594" posY="341" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1624" posY="330" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1763" posY="465" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1736" posY="543" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1758" posY="496" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1706" posY="430" width="68" height="97"/>
+    <item type="1" effectPath="7200004.swf" posX="1673" posY="398" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1625" posY="461" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1642" posY="496" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1673" posY="542" width="26" height="48"/>
+    <item type="1" effectPath="7200062.swf" posX="1718" posY="588" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1732" posY="502" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1655" posY="458" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1632" posY="358" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1637" posY="358" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1670" posY="364" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1670" posY="364" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1670" posY="364" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1645" posY="431" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1569" posY="584" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1571" posY="660" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1374" posY="431" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1409" posY="273" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1487" posY="324" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1390" posY="349" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1656" posY="414" width="68" height="97"/>
+    <item type="1" effectPath="7200004.swf" posX="1734" posY="262" width="26" height="48"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1433" posY="413" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1699" posY="228" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1694" posY="197" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1694" posY="197" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1677" posY="151" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1678" posY="148" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1678" posY="148" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1668" posY="142" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1673" posY="278" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1670" posY="219" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1658" posY="179" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1605" posY="423" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1532" posY="595" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1690" posY="548" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1690" posY="548" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1684" posY="670" width="0" height="0"/>
+    <item type="1" effectPath="17001_3_1.swf" posX="1693" posY="679" width="0" height="0"/>
+    <item type="1" effectPath="7200062.swf" posX="1735" posY="694" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1735" posY="694" width="68" height="97"/>
+    <item type="1" effectPath="7200004.swf" posX="1774" posY="633" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="922" posY="582" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1636" posY="694" width="26" height="48"/>
+    <item type="1" effectPath="7200062.swf" posX="1656" posY="690" width="68" height="97"/>
+    <item type="1" effectPath="7200062.swf" posX="1592" posY="720" width="68" height="97"/>
+    <item type="1" effectPath="7200004.swf" posX="1550" posY="746" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1534" posY="707" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1733" posY="502" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1653" posY="216" width="26" height="48"/>
+    <item type="1" effectPath="7200004.swf" posX="1624" posY="130" width="26" height="48"/>
+  </effect>
+  <effect>
+    <item type="-1" effectPath="7200004.swf" posX="615" posY="305" width="26" height="48"/>
+    <item type="-1" effectPath="7200004.swf" posX="655" posY="305" width="26" height="48"/>
+    <item type="-1" effectPath="7200004.swf" posX="731" posY="277" width="26" height="48"/>
+    <item type="-1" effectPath="7200004.swf" posX="829" posY="275" width="26" height="48"/>
+    <item type="-1" effectPath="7200004.swf" posX="968" posY="184" width="26" height="48"/>
+    <item type="-1" effectPath="7200004.swf" posX="1012" posY="154" width="26" height="48"/>
+    <item type="-1" effectPath="7200004.swf" posX="1077" posY="148" width="26" height="48"/>
+    <item type="-1" effectPath="7200004.swf" posX="1141" posY="148" width="26" height="48"/>
+  </effect>
+  <npcs>
+    <npc type="1" id="0" ai="0" ltx="32" lty="9" rbx="37" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="10" rbx="35" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="9" rbx="33" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="8" rbx="30" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="9" rbx="31" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="9" rbx="30" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="10" rbx="34" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="29" lty="7" rbx="35" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="36" lty="12" rbx="36" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="7" rbx="36" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="7" rbx="36" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="9" rbx="30" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="10" rbx="33" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="32" lty="10" rbx="32" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="9" rbx="31" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="9" rbx="31" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="32" lty="9" rbx="32" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="6" rbx="27" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="8" rbx="27" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="7" rbx="27" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="6" rbx="27" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="7" rbx="28" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="8" rbx="28" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="9" rbx="28" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="9" rbx="28" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="10" rbx="28" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="9" rbx="28" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="9" rbx="27" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="10" rbx="27" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="11" rbx="27" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="12" rbx="28" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="12" rbx="31" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="12" rbx="36" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="36" lty="12" rbx="36" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="36" lty="11" rbx="36" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="36" lty="10" rbx="36" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="35" lty="10" rbx="35" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="34" lty="10" rbx="34" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="34" lty="11" rbx="34" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="35" lty="12" rbx="35" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="35" lty="11" rbx="35" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="34" lty="12" rbx="34" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="12" rbx="33" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="11" rbx="33" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="32" lty="11" rbx="32" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="32" lty="12" rbx="32" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="11" rbx="31" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="10" rbx="31" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="10" rbx="30" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="11" rbx="30" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="12" rbx="30" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="29" lty="12" rbx="29" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="29" lty="11" rbx="29" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="11" rbx="28" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="12" rbx="27" rby="12" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="29" lty="10" rbx="29" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="29" lty="9" rbx="29" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="29" lty="8" rbx="29" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="29" lty="7" rbx="29" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="7" rbx="30" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="8" rbx="30" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="8" rbx="31" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="7" rbx="31" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="32" lty="7" rbx="32" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="32" lty="8" rbx="32" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="8" rbx="33" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="7" rbx="33" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="34" lty="7" rbx="34" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="35" lty="7" rbx="35" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="36" lty="7" rbx="36" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="36" lty="9" rbx="36" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="36" lty="8" rbx="36" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="35" lty="8" rbx="35" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="34" lty="8" rbx="34" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="34" lty="9" rbx="34" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="35" lty="9" rbx="35" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="9" rbx="33" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="8" rbx="31" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="32" lty="8" rbx="32" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="33" lty="8" rbx="33" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="35" lty="8" rbx="35" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="35" lty="10" rbx="35" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="36" lty="10" rbx="36" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="37" lty="10" rbx="37" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="37" lty="11" rbx="37" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="37" lty="11" rbx="37" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="37" lty="10" rbx="37" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="37" lty="10" rbx="37" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="37" lty="10" rbx="37" rby="10" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="37" lty="11" rbx="37" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="35" lty="8" rbx="35" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="34" lty="8" rbx="34" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="31" lty="8" rbx="31" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="30" lty="9" rbx="30" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="22" lty="6" rbx="28" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="9" rbx="28" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="9" rbx="27" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="26" lty="8" rbx="26" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="25" lty="8" rbx="25" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="23" lty="8" rbx="23" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="23" lty="8" rbx="23" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="24" lty="8" rbx="24" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="22" lty="8" rbx="22" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="22" lty="9" rbx="22" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="23" lty="9" rbx="23" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="24" lty="9" rbx="24" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="25" lty="9" rbx="25" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="9" rbx="27" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="8" rbx="27" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="8" rbx="28" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="7" rbx="28" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="28" lty="6" rbx="28" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="6" rbx="27" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="27" lty="7" rbx="27" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="26" lty="7" rbx="26" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="26" lty="6" rbx="26" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="25" lty="7" rbx="25" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="24" lty="7" rbx="24" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="24" lty="6" rbx="24" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="25" lty="6" rbx="25" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="23" lty="6" rbx="23" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="22" lty="6" rbx="22" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="22" lty="7" rbx="22" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="23" lty="7" rbx="23" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="26" lty="9" rbx="26" rby="9" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="37" lty="10" rbx="37" rby="11" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="6" rbx="51" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="50" lty="5" rbx="52" rby="8" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="41" lty="4" rbx="43" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="41" lty="5" rbx="41" rby="5" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="42" lty="6" rbx="42" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="42" lty="5" rbx="42" rby="5" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="43" lty="5" rbx="43" rby="5" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="43" lty="4" rbx="43" rby="4" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="42" lty="4" rbx="42" rby="4" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="41" lty="4" rbx="41" rby="4" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="41" lty="6" rbx="41" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="41" lty="7" rbx="41" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="42" lty="7" rbx="42" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="43" lty="7" rbx="43" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="43" lty="6" rbx="43" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="43" lty="6" rbx="43" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="44" lty="6" rbx="44" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="40" lty="6" rbx="42" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="6" rbx="51" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="7" rbx="51" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="6" rbx="51" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="7" rbx="51" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="7" rbx="51" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="44" lty="6" rbx="44" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="42" lty="6" rbx="42" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="42" lty="6" rbx="42" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="6" rbx="51" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="7" rbx="51" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="7" rbx="51" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="6" rbx="51" rby="6" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="5" rbx="51" rby="5" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="5" rbx="51" rby="5" num="0" time="0" direct="0" underSea="1" params=""/>
+    <npc type="1" id="0" ai="0" ltx="51" lty="5" rbx="51" rby="7" num="0" time="0" direct="0" underSea="1" params=""/>
+  </npcs>
+  <transferPoints/>
+  <monsterTeams/>
+  <enclosurePos/>
+</map>
