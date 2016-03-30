@@ -160,7 +160,7 @@ package com.wg.scene
 		private var _fxWideScreenTime:Number;
 		private var _fxWideScreenComplete:Function;
 		
-		public function SceneCamera(flashStage:Stage)
+		public function SceneCamera(flashStage:Stage,testStage:Sprite)
 		{
 			super();
 
@@ -176,6 +176,7 @@ package com.wg.scene
 			/*_cameraStage.x = 200;
 			_cameraStage.y = 100;*/
 			flashStage.addChild(_cameraStage);
+			flashStage.swapChildren(testStage,_cameraStage);
 			setCameraSize(flashStage.stageWidth, flashStage.stageHeight);
 		}
 		

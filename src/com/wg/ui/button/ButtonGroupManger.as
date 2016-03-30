@@ -18,7 +18,7 @@ package com.wg.ui.button
 		private var btnArrDic:Dictionary;//存储Array
 		private var btnNum:int;
 		private static var _instance:ButtonGroupManger;
-		public function ButtonGroupManger():*
+		public function ButtonGroupManger():void
 		{
 			if(_instance)
 			{

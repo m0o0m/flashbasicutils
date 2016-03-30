@@ -164,7 +164,7 @@ package com.wg.utils.timeUtils
 			var restWeekNum:int = 0;
 			var date:Date = new Date($greYear, $greMonth - 1);
 			var firstDayWeekNum:Number = date.getDay();    //每月的1号是星期几
-			var manyDaysNum:int = greMonthManyDays($greYear, $greMonth);
+			var manyDaysNum:int = TimeUtil.greMonthManyDays($greYear, $greMonth);
 			if(firstDayWeekNum >= 1 && firstDayWeekNum <= 5)
 			{
 				var numDateNum:int = 27 - firstDayWeekNum;

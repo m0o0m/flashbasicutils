@@ -189,4 +189,7 @@ elments 执行onframe,赋值显示对象坐标等
 三角函数
 地图场景运动
 A星寻路
+Log 添加某行代码被调用的地方所在的类及行号 parentLevel
+
+添加测试项目 eventtest:测试eventdispatcher 和event 消息机制;
 

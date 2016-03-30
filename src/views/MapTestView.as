@@ -29,11 +29,17 @@ package views
 	import starling.core.Starling;
 	import starling.display.Sprite;
 	
+	/**
+	 *使用此项目,需要首先 运用 数值配置文件使用  加载地图资源信息; 
+	 * @author Administrator
+	 * 
+	 */
 	public class MapTestView extends ViewBase
 	{
 		private var _mvcTimer:MvcTimer;
 		
 		public var firstInitSceneConfig:XML;
+		private var mapSceneInfo:MapSceneInfo;
 		public function MapTestView()
 		{
 			panelName = "maptest";
@@ -78,6 +84,17 @@ package views
 				{
 					Config.camera.watchPoint(900,500);
 				});
+				
+				content.addorclean_btn.addEventListener(MouseEvent.CLICK,function(e:MouseEvent):void
+				{
+					if(Config.camera)
+					{
+						sceneDispose();
+					}else
+					{
+						readyAndEnterScene(mapSceneInfo);
+					}
+				});
 			}
 			super.render();
 			//加载101地图;
@@ -90,7 +107,7 @@ package views
 				mSeaMapSceneLoader.loadCompleteCallback = changedToMapSceneCompleteHandler;
 				
 				var currentMapId:int = 101;
-				var mapSceneInfo:MapSceneInfo = mSeaMapSceneLoader.getMapSceneInfo(currentMapId, new BitmapData(10,10), firstInitSceneConfig);
+				mapSceneInfo = mSeaMapSceneLoader.getMapSceneInfo(currentMapId, new BitmapData(10,10), firstInitSceneConfig);
 				readyAndEnterScene(mapSceneInfo);
 			});
 			
@@ -111,7 +128,7 @@ package views
 		{
 			//pre init
 			//设置镜头
-			Config.camera = new SceneCamera(_stage);
+			Config.camera = new SceneCamera(_stage,this);
 			Config.camera.setCameraSize(stage.stageWidth, stage.stageHeight);//camera.setCameraSize(stage.stageWidth, stage.stageHeight);
 
 //			Scheduler.getInstance().addTickedObject(Config.camera);
@@ -343,11 +360,25 @@ package views
 		override protected function dispose():void
 		{
 			cancelSceneListenerHandler();
+			if(Config.camera)
+			{
+				Scheduler.getInstance().removeAnimatedObject(Config.camera);
+				Scheduler.getInstance().removeAnimatedObject(Config.camera);
+				Scheduler.getInstance().stop();
+				_stage.removeChild(Config.camera.cameraStage);
+			}
+			
+			this.removeChild(content);
+			content = null;
+			Config.camera = null;
+		}
+		
+		private function sceneDispose():void
+		{
+			cancelSceneListenerHandler();
 			Scheduler.getInstance().removeAnimatedObject(Config.camera);
 			Scheduler.getInstance().removeAnimatedObject(Config.camera);
 			Scheduler.getInstance().stop();
-			this.removeChild(content);
-			content = null;
 			_stage.removeChild(Config.camera.cameraStage);
 			Config.camera = null;
 		}

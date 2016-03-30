@@ -26,6 +26,11 @@ package views
 	
 	import mymap.scene.Mapscene;
 
+	/**
+	 *详细的操作效果,可在MaptestView中,查看; 
+	 * @author Administrator
+	 * 
+	 */
 	public class SceneTestView extends ViewBase
 	{
 		private var _mvcTimer:MvcTimer;
@@ -100,7 +105,7 @@ package views
 			/*_mvcTimer = new MvcTimer;
 			_mvcTimer.init(this);*/
 			//设置镜头
-			Config.camera = new SceneCamera(_stage);
+			Config.camera = new SceneCamera(_stage,this);
 			Config.camera.setCameraSize(800,400);
 			/*content.x = 100;
 			content.y = 100;
