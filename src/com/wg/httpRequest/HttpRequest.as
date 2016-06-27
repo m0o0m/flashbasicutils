@@ -1,6 +1,8 @@
 package com.wg.httpRequest
 {
 	
+	import com.wg.logging.Log;
+	
 	import flash.events.Event;
 	import flash.events.HTTPStatusEvent;
 	import flash.events.IEventDispatcher;
@@ -27,10 +29,14 @@ package com.wg.httpRequest
 		private var _requestVO:HttpRequestVO;
 		public static var openLoading:Function;
 		public static var closeLoading:Function;
-		public function HttpRequest(_request:HttpRequestVO,_response:HttpResponseVO)
+		public static var method: String = URLRequestMethod.GET;
+		public static var defaultDataFormat: String = URLLoaderDataFormat.TEXT;
+		public function HttpRequest(_request:HttpRequestVO,_response:HttpResponseVO,dataFormat: String = "",method: String = "")
 		{
 			_requestVO = _request;
 			_responseVO = _response;
+			this._requestVO.method = method == "" ? HttpRequest.method : method;
+			this._requestVO.dataFormat = dataFormat == "" ? HttpRequest.defaultDataFormat : dataFormat;
 			submit();
 		}
 
@@ -53,17 +59,21 @@ package com.wg.httpRequest
 			如果 dataFormat 属性的值是 URLLoaderDataFormat.VARIABLES，则所接收的数据是一个包含 URL 编码变量的 URLVariables 对象。
 			
 			*/
-			loader.dataFormat = URLLoaderDataFormat.BINARY;
+			//loader.dataFormat = URLLoaderDataFormat.BINARY;
+			this.loader.dataFormat = this._requestVO.dataFormat;
 			configureListeners(loader);
 			var header:URLRequestHeader = new URLRequestHeader("X-Requested-With", "XMLHttpRequest");
-//			var header2:URLRequestHeader = new URLRequestHeader("Cookie", "ds.lottoID=2;ds.lottoTypeID=1;");
+			//指定传送的值为json格式;
+			var header2:URLRequestHeader = new URLRequestHeader("Content-Type", "application/json");
+//			var header2:URLRequestHeader = new URLRequestHeader("Cookie", "ds.lottoID=2;ds.lottoTypeID=1;");Content-Type=application/json
 //			var URLSt:URLRequest = new URLRequest("http://www.baidu.com");
 			var URLSt:URLRequest = new URLRequest(_requestVO.url);
 			
 //			var URLSt:URLRequest = new URLRequest("http://lotto.222kkw.com/robots.txt");
-			URLSt.method = URLRequestMethod.GET;
+			//URLSt.method = URLRequestMethod.GET;
+			URLSt.method = this._requestVO.method;
 			URLSt.requestHeaders.push(header);
-//			URLSt.requestHeaders.push(header2);
+			URLSt.requestHeaders.push(header2);
 			//设置要传输的信息
 
 			/*
@@ -77,7 +87,7 @@ package com.wg.httpRequest
 			否则，该对象会转换为字符串，并且该字符串会用作 POST 或 GET 数据。
 
 			*/
-			URLSt.data = _requestVO.urlVariables;
+			URLSt.data = _requestVO.urlData;
 			
 			try {
 				loader.load(URLSt);
@@ -96,15 +106,29 @@ package com.wg.httpRequest
 			dispatcher.addEventListener(HTTPStatusEvent.HTTP_STATUS, httpStatusHandler);
 			dispatcher.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
 		}
-		
+		/**
+		 * 服务端返回json格式的字符串,默认utf8编码解析;
+		 * 如果二进制形式返回,则要先解码;
+		 * */
 		private function completeHandler(event:Event):void {
 			var loader:URLLoader = URLLoader(event.target);
 			trace(_requestVO.url);
-			trace("httprequest::completeHandler",encode(URLLoader(event.target).data));
-		 	var data:Object = JSON.parse(encode(URLLoader(event.target).data));
+			
+			trace("httprequest::completeHandler",urldata);
+		 	var data:Object //= JSON.parse(urldata);
 //		 	var data:Object = JSON.parse(URLLoader(event.target).data);
 //			trace("completeHandler==============: " + data["6"]["dish"][0]);
 //			var json:JSONDecoder = new JSONDecoder(URLLoader(event.target).data);
+			if(this._requestVO.dataFormat == URLLoaderDataFormat.BINARY)
+			{
+				var urldata:String = encode(URLLoader(event.target).data);
+				data = JSON.parse(urldata);
+			}else
+			{
+				//                    data = <any>JSON.parse((<egret.URLLoader>(event.target)).data);
+				data = ((event.target)).data;
+				Log.trace(1);
+			}
 			_responseVO.formatData(data);
 //			_responseVO.formatData(json.getValue());
 			_requestVO.completeFunc(_responseVO);

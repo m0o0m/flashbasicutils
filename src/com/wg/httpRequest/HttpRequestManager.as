@@ -8,6 +8,7 @@ package com.wg.httpRequest
 		private var requestDataObj:Object = {};
 		private var responseDataObj:Object = {};
 		private var httprerquestObj:Object = {};
+		
 		public function HttpRequestManager()
 		{
 			if(_instance)
@@ -34,7 +35,7 @@ package com.wg.httpRequest
 		}
 		
 		
-		public function send(url:String,callbackFunc:Function,requestData:Object = null):void
+		public function send(url:String,callbackFunc:Function,requestData:Object = null,dataFormat: String = "",method:String = ""):void
 		{
 			var requestCls:Class = HttpRequestList.instance.getRequestClass(url);
 			
@@ -53,7 +54,7 @@ package com.wg.httpRequest
 			}
 			//多次发送时,这里清除,但是内存中不清除,会在内存中继续操作和接收请求返回的数据;
 			httpRequests = null;
-			httpRequests = new HttpRequest(requestDataObj[url],responseDataObj[url]);
+			httpRequests = new HttpRequest(requestDataObj[url],responseDataObj[url],dataFormat,method);
 		}
 	}
 }

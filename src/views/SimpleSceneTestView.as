@@ -25,7 +25,7 @@ package views
 		public static var player:PlayerData;
 		private function startinit():void
 		{	
-			// TODO Auto Generated method stub
+			// TODO Auto Generated method stub 
 			player = new PlayerData();
 			
 			townMap = new TownMapView();

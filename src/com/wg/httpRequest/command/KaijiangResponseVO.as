@@ -17,11 +17,6 @@ package com.wg.httpRequest.command
 		}
 		
 		
-		public function get responseData():Object
-		{
-			return _responseData;
-		}
-
 		public function get name():String
 		{
 			return _responseData.name;
@@ -31,6 +26,14 @@ package com.wg.httpRequest.command
 			super.formatData(data);
 		}
 		
+		override public function toString():String
+		{
+		var tempstr:String = "";
+		tempstr+="status:"+_responseData.status+"\n";
+		tempstr+="name:"+this.name+"\n";
+		tempstr+="url:"+_responseData.url+"\n";
+		return tempstr;
+		}
 		
 	}
 }

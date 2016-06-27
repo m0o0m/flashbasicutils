@@ -10,10 +10,18 @@ package com.wg.httpRequest
 		{
 			
 		}
+		public function get responseData():Object
+		{
+			return _responseData;
+		}
 		
 		public function formatData(data:Object):void
 		{
 			_responseData = data;
+		}
+		public function toString():String{
+			var tempstr:String = "";
+			return tempstr;
 		}
 	}
 }

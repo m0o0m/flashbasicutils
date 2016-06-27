@@ -2,6 +2,7 @@ package com.wg.httpRequest.command
 {
 	import com.wg.httpRequest.HttpRequestVO;
 	
+	import flash.net.URLLoaderDataFormat;
 	import flash.net.URLVariables;
 	
 	
@@ -9,6 +10,7 @@ package com.wg.httpRequest.command
 	{
 		public function KaijiangRequestVO(_url:String,func:Function)
 		{
+			//dataFormat = URLLoaderDataFormat.BINARY;//在使用处定义
 			super(_url,func);
 		}
 		override public function get needShowLoading():Boolean
@@ -20,7 +22,10 @@ package com.wg.httpRequest.command
 			urlVariables = new URLVariables();
 			urlVariables.name = arr.name;
 		}
-		
+		override protected function initurldata(datas:* = null):void
+		{
+			super.initurldata(datas);
+		}
 		/**
 		 * 将数据处理,打包成json;
 		 * @param Obj
@@ -29,7 +34,7 @@ package com.wg.httpRequest.command
 		override public function formateData(Obj:Object):void
 		{
 			super.formateData(Obj);
-			initurlvariables(Obj);
+			this.initurldata(Obj["data"]);
 		}
 		
 		

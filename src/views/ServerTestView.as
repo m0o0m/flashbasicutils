@@ -8,10 +8,14 @@ package views
 	import com.wg.httpRequest.command.KaijiangResponseVO;
 	import com.wg.socketserver.Server;
 	import com.wg.socketserver.messages.Message;
-	import myserverMessages.testcommand.TestMessage;
-	import myserverMessages.testcommand.TestMessageResponse;
 	
 	import flash.events.MouseEvent;
+	import flash.net.URLLoaderDataFormat;
+	import flash.net.URLRequestMethod;
+	import flash.net.URLVariables;
+	
+	import myserverMessages.testcommand.TestMessage;
+	import myserverMessages.testcommand.TestMessageResponse;
 	
 	public class ServerTestView extends ViewBase
 	{
@@ -21,7 +25,8 @@ package views
 			panelName = "servertest";
 			super();
 		}
-		
+		private var send_text:String = "";
+		private var get_text:String = "";
 		override protected function render():void
 		{
 			if(!content)
@@ -33,6 +38,8 @@ package views
 				content.socketbtn.addEventListener(MouseEvent.CLICK,socketHandler);
 				content.socket_connectbtn.addEventListener(MouseEvent.CLICK,sockeconnecttHandler);
 				content.httpbtn.addEventListener(MouseEvent.CLICK,httpHandler);
+				HttpRequestList.domain = "localhost:3000";
+				content.send_ta.text = '{"name":"servertestview","url":"helo"}';
 				
 			}
 			super.render();
@@ -80,12 +87,16 @@ package views
 		}
 		private function httpHandler(e:MouseEvent):void
 		{
+			send_text = content.send_ta.text;
+			var tempobj:Object = {"name":"objtest"};
 			// TODO Auto Generated method stub
 			// HttpRequest 根据http请求连接 创建http请求,并保存httprequestmanager 创建 的requestvo 和reponsevo
 			//具体是哪两个消息对象,根据httprequestlist配置,通过请求url连接读取;
+			//传送的urldata是直接传送字符串还是经过urlvaliale转换的字符串,要看服务端的处理情况;
 			HttpRequestManager.instance.send(HttpRequestList.kaijiangrequest,function(repsonse:HttpResponseVO):void{
-				trace((repsonse as KaijiangResponseVO).name,{"name":"httpfasong"});
-			});
+				content.handler_ta.text = repsonse.toString();
+				//trace((repsonse as KaijiangResponseVO).name,{"name":"httpfasong"});
+			},send_text,URLLoaderDataFormat.BINARY,URLRequestMethod.POST);
 		}
 		private var server:Server;
 		private function socketHandler(e:MouseEvent):void

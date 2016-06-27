@@ -45,7 +45,7 @@ package com.wg.httpRequest
 		}
 		public static function get kaijiangrequest():String
 		{
-			var url:String = "http://"+HttpRequestList.domain+"/index.php";
+			var url:String = "http://"+HttpRequestList.domain+"/jsontest";
 //			var url:String =  "http://192.168.8.80:88/api/pankou/GetKaiPan";
 //			traceUrl(url);
 			return url;
