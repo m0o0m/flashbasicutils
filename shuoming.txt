@@ -53,6 +53,8 @@ assets 对wg相关资源的处理;
 resource,loading, 加载并处理swf;
 loading???
 
+
+ResourceLoader 类
 load(loaderList:Array, progressCallback:Function, completeCallback:Function):void
 开始加载资源;
 loaderList:Array =  [ResourceLoaderData],
@@ -67,6 +69,16 @@ className:String class的名称
 keyName:String key值;对应注册的swf,一般为swf的名称,也可以在load()的时候指定;
 getLoadData(path:String, key:String=""):ResourceLoaderData
 返回一个swf路径和此资源的 key的对应;
+
+ResourceManager 类
+组合ResourceLoader类
+提供保存加载的swf,保存的键值对
+
+范例
+var className:String = "loadswf2";
+//[ResourceLoaderData],progresshandler,completehandler;
+Config.resourceLoader.load([Config.resourceLoader.getLoadData(Config.uri.getPanelURI(className), className)], function(path:String, bytesLoaded:uint=1, bytesTotal:uint=1):void{}, onLoadComplete);
+
 =============mvc=================
 
 mvc 的结构
@@ -193,3 +205,18 @@ Log 添加某行代码被调用的地方所在的类及行号 parentLevel
 
 添加测试项目 eventtest:测试eventdispatcher 和event 消息机制;
 
+=============httprequest api===============
+//发送请求,
+HttpRequestManager.instance.send(HttpRequestList.kaijiangrequest,
+function(repsonse:HttpResponseVO):void{
+				content.handler_ta.text = repsonse.toString();
+			},send_text,URLLoaderDataFormat.BINARY,URLRequestMethod.POST);
+
+HttpRequestList 类
+定义请求连接
+
+*HttpRequestVO 类
+定义某请求发送的数据格式
+
+*HttpResponseVO 类
+定义某返回数据的格式 

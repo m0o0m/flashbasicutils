@@ -10,7 +10,7 @@ package test.eventtest
 		{
 			eventtest.sampleeventdipat.getEventDispatcher().addEventListener(MyEvent.TESTCONST,helloHandler);
 		}
-		function helloHandler(e:Event){
+		private function helloHandler(e:Event):void{
 			trace("TestEventHandleObj::收到消息 "+e.type);
 		}
 	}

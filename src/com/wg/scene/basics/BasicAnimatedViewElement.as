@@ -31,15 +31,15 @@ package  com.wg.scene.basics
 			{
 				// Need to register.
 				mIsRegisteredForUpdates = true;
-				Scheduler.addTickedObject(this);
-				Scheduler.addAnimatedObject(this);
+				//Scheduler.addTickedcontent;
+				//Scheduler.addAnimatedcontent;
 			}
 			else if(!mRegisterForUpdates && mIsRegisteredForUpdates)
 			{
 				// Need to unregister.
 				mIsRegisteredForUpdates = false;
-				Scheduler.removeTickedObject(this);
-				Scheduler.removeAnimatedObject(this);
+				//Scheduler.removeTickedcontent;
+				//Scheduler.removeAnimatedcontent;
 			}
 		}
 		

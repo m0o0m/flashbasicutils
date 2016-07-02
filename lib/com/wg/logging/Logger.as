@@ -33,13 +33,18 @@ package com.wg.logging
 				data = ( data == null ? "" : data.concat(" ") );
 				data = data.concat(val);	
 			}
-			
+			/*
 			var time:String = StringUtil.sprintf("%.2d:%.2d:%.2d.%.3d", 
 				logInfo.date.getHours(), 
 				logInfo.date.getMinutes(), 
 				logInfo.date.getSeconds(), 
 				logInfo.date.getMilliseconds()); 
-				
+				*/
+			var time:String = logInfo.date.getHours()+
+				":"+logInfo.date.getMinutes()+
+				":"+logInfo.date.getSeconds()+
+				":"+logInfo.date.getMilliseconds();
+			
 			var logLevel:String = Log.LEVEL[logInfo.level];
 			if (logLevel == null) {
 				logLevel = logInfo.level;

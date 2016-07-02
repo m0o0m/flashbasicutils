@@ -4,7 +4,7 @@ package com.wg.resource
 	
 	import flash.display.Bitmap;
 	import flash.display.LoaderInfo;
-
+	
 	/**
 	 * 加载swf,并保存起来,
 	 * 提供通过class名称字符串获取类;
@@ -13,12 +13,12 @@ package com.wg.resource
 	 */
 	public class ResourceLoader
 	{	
-//		private static var _instance:ResourceLoader;
-//		public static function getInstance():ResourceLoader
-//		{
-//			if(_instance == null) _instance = new ResourceLoader();
-//			return _instance;
-//		}
+		//		private static var _instance:ResourceLoader;
+		//		public static function getInstance():ResourceLoader
+		//		{
+		//			if(_instance == null) _instance = new ResourceLoader();
+		//			return _instance;
+		//		}
 		
 		private var _resourceManager:ResourceManager;
 		private var _resourceLoaderInfo:ResourceLoaderInfo;
@@ -27,7 +27,7 @@ package com.wg.resource
 		
 		private var _callbackList:Array = [];
 		private var _loaderStatus:Boolean = false;
-
+		
 		private var _delayResourceList:Array = [];
 		
 		public function ResourceLoader()
@@ -140,6 +140,7 @@ package com.wg.resource
 			
 			var imageLoaderData:ResourceLoaderData = this._resourceManager.getResource(keyName);
 			if (imageLoaderData == null || imageLoaderData.loaderInfo == null) {
+				Log.error("没有找到相关的键值对 "+"keyName:"+keyName,"className:"+className);
 				return null;
 			}
 			var cls:Class = imageLoaderData.loaderInfo.applicationDomain.getDefinition(className) as Class;
@@ -164,8 +165,11 @@ package com.wg.resource
 				this._loaderStatus = true;
 				
 				var resourceLoaderData:ResourceLoaderData = this._loaderList.pop() as ResourceLoaderData;
-				if(resourceLoaderData == null) return;
-					
+				if(resourceLoaderData == null){
+					Log.error(resourceLoaderData.path+"或"+resourceLoaderData.key+" 没有找到");
+					return;
+				}
+				
 				var varData:ResourceLoaderData = this._resourceManager.getResource(resourceLoaderData.key);
 				if(varData != null){
 					
@@ -192,9 +196,10 @@ package com.wg.resource
 				
 				if(!status){
 					Log.debug("validLoader"+_callbackList[loaderIndex]);
+					//trace("validLoader"+_callbackList[loaderIndex]);
 					var progressCallback:Function = this._callbackList[loaderIndex]["progressCallback"] as Function;
 					if(progressCallback != null){
-//						progressCallback(resourceLoaderData.path, 1, 1);
+						//						progressCallback(resourceLoaderData.path, 1, 1);
 						
 						progressCallback(resourceLoaderData.path, 
 							resourceLoaderData.loaderInfo ? resourceLoaderData.loaderInfo.bytesLoaded : 0,
@@ -274,3 +279,5 @@ package com.wg.resource
 		}
 	}
 }
+import com.wg.resource;
+
