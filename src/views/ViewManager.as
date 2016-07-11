@@ -67,6 +67,9 @@ package views
 			
 			viewvector[15] = new SFSServerView();
 			dic[viewvector[15].panelName] = 15;
+			
+			viewvector[16] = new JiaMiView();
+			dic[viewvector[16].panelName] = 16;
 		}
 		
 		/**

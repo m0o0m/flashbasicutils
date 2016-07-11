@@ -15,7 +15,10 @@ package views
 	{
 		private var namevec:Vector.<String> = new Vector.<String>();
 		private var lanmuGroupArr:Vector.<LittleGroupButton> = new Vector.<LittleGroupButton>;
-		private var panelNamevec:Array = ["stimliLoad","myui","ziptest","debuglogic","basicutils","loadswf","layout","mvc","servertest","designtest","scenetest","maptest","simplemap","formulatools","sfsserver"];
+		//保存加载的swf的名称,也是默认主mc类的名称;传递给点击按钮的gameType,然后点击时再传给viewmanager
+		//viewmanager根据panelNamevec的字符串对应的索引,找到保存在数组中的view类实例
+		//view的panelName == littlebtn.gametype == swf的名称 == 默认主mc类的类名;
+		private var panelNamevec:Array = ["stimliLoad","myui","ziptest","debuglogic","basicutils","loadswf","layout","mvc","servertest","designtest","scenetest","maptest","simplemap","formulatools","sfsserver","jiami"];
 		public function UIView()
 		{
 			panelName = "ui";
@@ -24,7 +27,7 @@ package views
 		override protected function render():void
 		{
 			namevec.push("资源加载","ui组使用","压缩工具","项目日志功能","基本工具","swf加载处理","层级管理",
-				"MVC","网络通讯方式","数值配置文件使用","摄像头,schedule","地图加载","简单地图加载","公式模拟","sfsserver","对话引导模块","战斗模块"
+				"MVC","网络通讯方式","数值配置文件使用","摄像头,schedule","地图加载","简单地图加载","公式模拟","sfsserver","加密解密","对话引导模块","战斗模块"
 			);
 			if(!content)
 			{
