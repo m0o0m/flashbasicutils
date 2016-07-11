@@ -15,7 +15,7 @@ package views
 	{
 		private var namevec:Vector.<String> = new Vector.<String>();
 		private var lanmuGroupArr:Vector.<LittleGroupButton> = new Vector.<LittleGroupButton>;
-		private var panelNamevec:Array = ["stimliLoad","myui","ziptest","debuglogic","basicutils","loadswf","layout","mvc","servertest","designtest","scenetest","maptest","simplemap","formulatools"];
+		private var panelNamevec:Array = ["stimliLoad","myui","ziptest","debuglogic","basicutils","loadswf","layout","mvc","servertest","designtest","scenetest","maptest","simplemap","formulatools","sfsserver"];
 		public function UIView()
 		{
 			panelName = "ui";
@@ -24,7 +24,7 @@ package views
 		override protected function render():void
 		{
 			namevec.push("资源加载","ui组使用","压缩工具","项目日志功能","基本工具","swf加载处理","层级管理",
-				"MVC","网络通讯方式","数值配置文件使用","摄像头,schedule","地图加载","简单地图加载","公式模拟","对话引导模块","战斗模块"
+				"MVC","网络通讯方式","数值配置文件使用","摄像头,schedule","地图加载","简单地图加载","公式模拟","sfsserver","对话引导模块","战斗模块"
 			);
 			if(!content)
 			{

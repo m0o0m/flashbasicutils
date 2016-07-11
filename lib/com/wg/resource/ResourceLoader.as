@@ -54,7 +54,10 @@ package com.wg.resource
 		
 		private function getKey(list:Array):String
 		{
-			if(list == null || list.length == 0) return null;
+			if(list == null || list.length == 0){
+				Log.error("获取key失败");
+				return null;
+			}
 			
 			var key:String = "";
 			
@@ -124,11 +127,13 @@ package com.wg.resource
 		{
 			var imageLoaderData:ResourceLoaderData = this._resourceManager.getResource(path);
 			if (imageLoaderData == null || imageLoaderData.loaderInfo == null) {
+				Log.error("获取content失败");
 				return null;
 			}
 			
 			var content:* = imageLoaderData.loaderInfo.content;
 			if (content == null) {
+				Log.error("获取content失败");
 				return null;
 			}
 			return content;
@@ -140,7 +145,7 @@ package com.wg.resource
 			
 			var imageLoaderData:ResourceLoaderData = this._resourceManager.getResource(keyName);
 			if (imageLoaderData == null || imageLoaderData.loaderInfo == null) {
-				Log.error("没有找到相关的键值对 "+"keyName:"+keyName,"className:"+className);
+				Log.error("没有找到class相关的键值对 "+"keyName:"+keyName,"className:"+className);
 				return null;
 			}
 			var cls:Class = imageLoaderData.loaderInfo.applicationDomain.getDefinition(className) as Class;
@@ -153,6 +158,7 @@ package com.wg.resource
 			
 			var imageLoaderData:ResourceLoaderData = this._resourceManager.getResource(keyName);
 			if (imageLoaderData == null || imageLoaderData.loaderInfo == null) {
+				Log.error("没有找到swf相关的键值对 "+"keyName:"+keyName,"className:"+className);
 				return null;
 			}
 			
@@ -223,11 +229,11 @@ package com.wg.resource
 						}
 						
 					}else{
-						throw new Error("");
+						throw new Error("validLoader Error");
 					}
 				}
 			}else{
-				throw new Error("");
+				throw new Error("validLoader Error");
 			}
 		}
 		

@@ -29,6 +29,7 @@ package views
 		private function clickHandler(e:MouseEvent):void
 		{
 			var className:String = "loadswf2";
+			//下面指定的swf路径和key可以不同,为了方便使用主class,设为 swf名称==主class名称==swf加载保存的key名称
 			Config.resourceLoader.load([Config.resourceLoader.getLoadData(Config.uri.getPanelURI(className), className)], function(path:String, bytesLoaded:uint=1, bytesTotal:uint=1):void{}, onLoadComplete);
 //			onLoadComplete();
 		}

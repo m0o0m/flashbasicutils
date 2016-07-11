@@ -64,6 +64,9 @@ package views
 			
 			viewvector[14] = new FormulaView();
 			dic[viewvector[14].panelName] = 14;
+			
+			viewvector[15] = new SFSServerView();
+			dic[viewvector[15].panelName] = 15;
 		}
 		
 		/**
