@@ -15,6 +15,8 @@ package sfsservertest
 	 */	
 	public class Connector extends SFSOperator
 	{
+		private var CURR_STATE:int = 0;
+		private var mylogin:Loginer;
 		
 		public function Connector(_sfs:SmartFox,_content:MovieClip)
 		{
@@ -29,9 +31,11 @@ package sfsservertest
 			sfs.addEventListener(SFSEvent.CONFIG_LOAD_FAILURE, onConfigLoadFailure)
 			
 				
-			new Loginer(sfs,content);
+			mylogin = new Loginer(sfs,content);
 			new Roomer(sfs,content);
 			new VariablesTest(_sfs,_content);
+			new Signuper(_sfs,_content);
+			new ErrorCoder(_sfs);
 			// Connect button listener
 			content.bt_connect.addEventListener(MouseEvent.CLICK, onBtConnectClick)
 			
@@ -43,11 +47,12 @@ package sfsservertest
 		{
 			// Load the default configuration file, config.xml
 			
-			//sfs.loadConfig()//通过sfs-config.xml来指定 配置;
-				//config 配置,连接服务器时,必须指定一个空间登录;
-			var configdata:ConfigData = new ConfigData();
-			configdata.zone = content.zone_txt.text;
-			sfs.connectWithConfig(configdata);
+			sfs.loadConfig()//通过sfs-config.xml来指定 配置;
+				
+			//config 配置,连接服务器时,必须指定一个空间登录;
+			//var configdata:ConfigData = new ConfigData();
+			//configdata.zone = content.zone_txt.text;
+			//sfs.connectWithConfig(configdata);
 		}
 		
 		//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -58,7 +63,29 @@ package sfsservertest
 		{
 			if (evt.params.success)
 			{
-				dTrace("Connection Success!")
+				dTrace("Connection Success!");
+				if (evt.params.success)
+				{
+					//连接成功后首先guest登录
+					if (CURR_STATE == AppStates.CONNECTION_FIRST)
+					{
+						//CURR_STATE = AppStates.LOGIN_SIGN_UP;
+						mylogin.guestLogin();
+					}
+						
+						// We're logging in as registered user, send the credentials
+					//已经有账号时的登录,如果已经默认匿名登录,那么首先要退出
+					else if (CURR_STATE == AppStates.CONNECTION_LOGIN)
+						mylogin.onloginHandler();
+						
+						// We're logging in for recovering the password, use a guest login
+					//修改密码的时候,首先默认guest登录
+					else if (CURR_STATE == AppStates.CONNECTION_PASS_RECOVER)
+					{
+						//CURR_STATE = AppStates.LOGIN_PASS_RECOVER;
+						mylogin.guestLogin();
+					}
+				}
 			}
 			else
 			{

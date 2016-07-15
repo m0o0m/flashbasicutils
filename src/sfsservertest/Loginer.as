@@ -4,6 +4,7 @@ package sfsservertest
 	import com.smartfoxserver.v2.core.SFSEvent;
 	import com.smartfoxserver.v2.requests.LoginRequest;
 	import com.smartfoxserver.v2.requests.LogoutRequest;
+	import com.smartfoxserver.v2.util.SFSErrorCodes;
 	
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
@@ -22,12 +23,23 @@ package sfsservertest
 			login_btn = _content.login_btn;
 			login_btn.addEventListener(MouseEvent.CLICK,onloginHandler);
 			_content.loginout_btn.addEventListener(MouseEvent.CLICK,onloginoutHandler);
-			sfs.addEventListener(SFSEvent.LOGOUT, onLogout);
+			sfs.addEventListener(SFSEvent.LOGOUT, onLogout);	
 		}
-		
-		protected function onloginHandler(event:MouseEvent):void
+		/**
+		 * 会有以下情况
+		 *-- Login failed: User name Fozzie is not recognized 
+		 * @param event
+		 * 
+		 */		
+		public function onloginHandler(event:MouseEvent = null):void
 		{
 			// TODO Auto-generated method stub
+			
+			if(sfs.currentZone){
+				dTrace("你已经登录到: " + sfs.currentZone+" 空间");
+				return;
+			}
+			
 			// This code is executed after the connection
 			//sfs.send( new LoginRequest("", "", "testzone") );//匿名登录,指定空间
 			sfs.send( new LoginRequest(content.zoneusername_txt.text,content.zoneuserpwd_txt.text,content.zone2_txt.text) );//fozzie用户登录连接时空间
@@ -36,7 +48,14 @@ package sfsservertest
 			//rooms指定,default 默认分发;
 			
 		}
-		
+		/**
+		 *发送会有重复的匿名的登录的情况; 
+		 * 
+		 */		
+		public function guestLogin():void
+		{
+			sfs.send( new LoginRequest());
+		}
 		protected function onloginoutHandler(event:MouseEvent):void
 		{
 			sfs.send(new LogoutRequest());

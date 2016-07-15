@@ -26,8 +26,9 @@ public class ZoneJoinEventHandler extends BaseServerEventHandler
 	public void handleServerEvent(ISFSEvent event) throws SFSException
 	{
 		User theUser = (User) event.getParameter(SFSEventParam.USER);
-				
-		new DBTest();
+			
+		//测试java代码连接数据库
+		//new DBTest();
 		
 		
 		// dbid is a hidden UserVariable, available only server side
@@ -41,7 +42,8 @@ public class ZoneJoinEventHandler extends BaseServerEventHandler
 		// Set the variables
 		List<UserVariable> vars = Arrays.asList(uv_dbId, uv_avatar);
 		getApi().setUserVariables(theUser, vars);
-		
+		/*
+		 * //自动加入房间
 		// Join the user
 		Room lobby = getParentExtension().getParentZone().getRoomByName("The Lobby");
 		//lobby.setPassword("123456");
@@ -49,5 +51,6 @@ public class ZoneJoinEventHandler extends BaseServerEventHandler
 			throw new SFSException("The Lobby Room was not found! Make sure a Room called 'The Lobby' exists in the Zone to make this example work correctly.");
 		
 		getApi().joinRoom(theUser, lobby);
+		*/
 	}
 }
