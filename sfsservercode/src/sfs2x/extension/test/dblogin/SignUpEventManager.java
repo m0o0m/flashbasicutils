@@ -13,11 +13,11 @@ import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
 import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
 
-public class SignUpRequestManager {
+public class SignUpEventManager {
 
 	private SignUpAssistantComponent suac;
 	public String zoneName = "";
-	public SignUpRequestManager(){
+	public SignUpEventManager(){
 		init();
 	}
 	public void init()

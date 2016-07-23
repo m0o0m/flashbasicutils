@@ -11,7 +11,7 @@ package sfsservertest
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
 	/**
-	 *1.注册用户前,先匿名登录再注册账号或是通过其他途径注册;
+	 *1.注册用户前,先匿名登录到某一空间再注册账号或是通过其他途径注册;
 	 * 2.第一次登录时,应激活验证,如果需要的话;激活验证时需要先登录已经注册的账号; 
 	 * @author Administrator
 	 * 
@@ -26,6 +26,7 @@ package sfsservertest
 		private var CMD_RESEND_EMAIL:String = "$SignUp.ResendEmail";
 		// The SignUp Password Recovery command
 		private var CMD_RECOVER:String = "$SignUp.Recover";
+		private var basiczone:String;
 
 
 		public function Signuper(_sfs:SmartFox, _content:MovieClip)
@@ -72,7 +73,14 @@ package sfsservertest
 			sfso.putUtfString("pword", content.signuserpwd_txt.text);
 			sfso.putUtfString("email", content.email_txt.text);
 			sfso.putInt("age",int(content.signage_txt.text));
-			sfso.putUtfString("zone",sfs.config.zone);
+			if(!sfs.config)
+			{
+				basiczone = "BasicExamples";
+			}else
+			{
+				basiczone = sfs.config.zone;
+			}
+			sfso.putUtfString("zone",basiczone);
 			sfs.send(new ExtensionRequest(CMD_SUBMIT, sfso));
 		}
 		

@@ -46,15 +46,26 @@ package sfsservertest
 		private function onBtConnectClick(evt:Event):void
 		{
 			// Load the default configuration file, config.xml
-			
-			sfs.loadConfig()//通过sfs-config.xml来指定 配置;
+			//方式一,通过配置文件
+			//sfs.loadConfig()//通过sfs-config.xml来指定 配置;
 				
+			//方式二:
 			//config 配置,连接服务器时,必须指定一个空间登录;
 			//var configdata:ConfigData = new ConfigData();
 			//configdata.zone = content.zone_txt.text;
 			//sfs.connectWithConfig(configdata);
+			//方式三:
+			sfs.connect("127.0.0.1",9933);
 		}
-		
+		private function disconnect():void
+		{
+			try{
+				sfs.killConnection();
+				sfs.disconnect();
+			}catch(e:Error){
+				dTrace(e.message);
+			}
+		}
 		//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		// SFS2X event handlers
 		//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

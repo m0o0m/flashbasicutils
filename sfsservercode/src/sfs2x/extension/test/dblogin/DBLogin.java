@@ -34,9 +34,10 @@ public class DBLogin extends SFSExtension
 		//匿名登录逻辑另写,并且启动privilege manager??
 		addEventHandler(SFSEventType.USER_LOGIN, LoginEventHandler.class);
 		addEventHandler(SFSEventType.USER_JOIN_ZONE, ZoneJoinEventHandler.class);
+		//addEventHandler(SFSEventType.)
 		//addEventHandler(SFSEventType.USER_JOIN_ROOM,LoginEventHandler.class);
 		addRequestHandler("testobjData",DataRequestHandler.class);
-		SignUpRequestManager signupmanager = new SignUpRequestManager();
+		SignUpEventManager signupmanager = new SignUpEventManager();
 		signupmanager.zoneName = getParentZone().getName();
 		suac = signupmanager.getSuac();
 		addRequestHandler(SignUpAssistantComponent.COMMAND_PREFIX,suac );

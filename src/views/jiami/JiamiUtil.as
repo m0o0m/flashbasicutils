@@ -1,11 +1,13 @@
 package views.jiami
 {
+	import com.hurlant.crypto.symmetric.CBCMode;
 	import com.hurlant.crypto.symmetric.DESKey;
 	import com.hurlant.crypto.symmetric.ECBMode;
 	import com.hurlant.util.Base64;
 	import com.hurlant.util.Hex;
 	
 	import flash.utils.ByteArray;
+
 	/**
 	 * http://crypto.hurlant.com/demo/srcview/
 	 * @author Administrator
@@ -31,11 +33,11 @@ package views.jiami
 		 * @param data
 		 * @param key
 		 * @return 
-		 * 
+		 * 被注释的一对加密解密可反向,现使用的加密解密不成对;
 		 */
 		public static function decrypt(data:String, key:String):String {
 			
-			/*
+			
 			var keyBytes:ByteArray = new ByteArray();
 			keyBytes.writeUTFBytes(key);
 			var pt:ByteArray = Hex.toArray(data);
@@ -43,9 +45,10 @@ package views.jiami
 			var cbc:CBCMode = new CBCMode(des);
 			cbc.IV = keyBytes;
 			cbc.decrypt(pt);
-			*/
-			trace("\n执行解密方法，key:",key,"，需要解密的字符串：",data);
+			return Hex.toString(Hex.fromArray(pt));
 			
+			trace("\n执行解密方法，key:",key,"，需要解密的字符串：",data);
+			/*
 			//实验化key的Bytearray对象，给DESKey使用
 			var b_keyByteArray:ByteArray=new ByteArray(); 
 			b_keyByteArray.writeUTFBytes(key);
@@ -62,6 +65,7 @@ package views.jiami
 			//执行解密
 			b_ecb.decrypt(b_byteArray);
 			return Hex.toString(Hex.fromArray(b_byteArray));
+			*/
 		}
 		/**
 		 * 加密
@@ -70,8 +74,16 @@ package views.jiami
 		 * @return 加密后生成ByteArray数据
 		 */		
 		public static function encrypt(data:String,key:String):String{
+			var keyBytes:ByteArray = new ByteArray();
+			keyBytes.writeUTFBytes(key);
+			var pt:ByteArray = Hex.toArray(data);
+			var des:DESKey = new DESKey(keyBytes);
+			var cbc:CBCMode = new CBCMode(des);
+			cbc.IV = keyBytes;
+			cbc.encrypt(pt);
+			return Hex.toString(Hex.fromArray(pt));
 			trace("执行加密方法，key:",key,"，被加密的字符串：",data);
-			
+			/*
 			//实验化key的Bytearray对象，给DESKey使用
 			var b_keyByteArray:ByteArray=new ByteArray(); 
 			b_keyByteArray.writeUTFBytes(key);
@@ -80,7 +92,8 @@ package views.jiami
 			var b_desKey:DESKey=new DESKey(b_keyByteArray);
 			
 			//不只是有ecb还有cbc,cfb等，有兴趣可以自己尝试
-			var b_ecb:ECBMode=new ECBMode(b_desKey);
+			//var b_ecb:ECBMode=new ECBMode(b_desKey);
+			var b_ecb:CBCMode=new CBCMode(b_desKey); 
 			var bytes:ByteArray; 
 			if (data) 
 			{ 
@@ -99,6 +112,7 @@ package views.jiami
 			//trace("十六进制形式密文:",byteArrayTo16(b_byteArray));
 			
 			return b_ciphertext;
+			*/
 		}
 		/**
 		 * 把ByteArray转换为16进制的形式的字符串
