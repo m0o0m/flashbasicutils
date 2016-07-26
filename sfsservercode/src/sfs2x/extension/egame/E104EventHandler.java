@@ -1,5 +1,10 @@
 package sfs2x.extension.egame;
 
+import sfs2x.extension.egame.sever.EgameFactory;
+import sfs2x.extension.egame.sever.game.EGame;
+import sfs2x.extension.egame.sever.request.E104Request;
+import sfs2x.extension.egame.sever.request.E108Request;
+
 import com.smartfoxserver.v2.core.ISFSEvent;
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
@@ -15,8 +20,13 @@ public class E104EventHandler extends BaseClientRequestHandler {
 	public void handleClientRequest(User arg0, ISFSObject arg1) {
 		// TODO Auto-generated method stub
 		SFSObject so = new SFSObject();
-		so.putDouble("balacne", 492.7);
+		
+//		EGame game = EgameFactory.getGame();
+//		game.setRequest(new E104Request());
+//		game.sendData(so);
+		so.putInt("errorCode", 0);
 		send("104",so,arg0);
+		getApi().logout(arg0);
 	}
 
 }

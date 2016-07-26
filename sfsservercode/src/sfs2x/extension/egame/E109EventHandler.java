@@ -1,5 +1,10 @@
 package sfs2x.extension.egame;
 
+import sfs2x.extension.egame.sever.EgameFactory;
+import sfs2x.extension.egame.sever.game.EGame;
+import sfs2x.extension.egame.sever.request.E108Request;
+import sfs2x.extension.egame.sever.request.E109Request;
+
 import com.smartfoxserver.v2.core.ISFSEvent;
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
@@ -16,14 +21,11 @@ public class E109EventHandler extends BaseClientRequestHandler {
 	public void handleClientRequest(User arg0, ISFSObject arg1) {
 		// TODO Auto-generated method stub
 		SFSObject so = new SFSObject();
-		so.putInt("state", 0);
-		SFSArray sa = new SFSArray();
-		so.putSFSArray("betList", sa);
-		SFSObject sa_so = new SFSObject();
-		sa.addSFSObject(sa_so);
-		sa_so.putInt("id", 502);
-		sa_so.putDouble("money", -5);
-		so.putDouble("balance", 496.7);
+		
+		EGame game = EgameFactory.getGame();
+		game.setRequest(new E109Request("109"));
+		game.sendData(so);
+		
 		send("109",so,arg0);
 	}
 

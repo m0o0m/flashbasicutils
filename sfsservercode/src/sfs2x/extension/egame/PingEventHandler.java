@@ -8,7 +8,7 @@ import com.smartfoxserver.v2.entities.data.ISFSObject;
 import com.smartfoxserver.v2.exceptions.SFSCreateRoomException;
 import com.smartfoxserver.v2.exceptions.SFSJoinRoomException;
 import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
-
+//心跳消息,发送内容保持连接
 public class PingEventHandler extends BaseClientRequestHandler{
 
 	@Override
