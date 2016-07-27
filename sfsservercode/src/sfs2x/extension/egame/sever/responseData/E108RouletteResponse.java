@@ -6,11 +6,11 @@ import com.smartfoxserver.v2.entities.data.SFSObject;
 /**
  * @author Administrator
  * @version 1.0
- * @created 26-七月-2016 11:28:58
+ * @created 27-七月-2016 17:18:24
  */
-public class E103BaccaratResponse extends EGameResponse {
+public class E108RouletteResponse extends EGameResponse {
 
-	public E103BaccaratResponse(){
+	public E108RouletteResponse(){
 
 	}
 
@@ -28,7 +28,11 @@ public class E103BaccaratResponse extends EGameResponse {
 	 * @param so    so
 	 */
 	public SFSObject responseData(SFSObject so){
+		so.putDouble("balance", 499.7);
 		so.putInt("errorCode", 0);
+		SFSObject pokers = new SFSObject();
+		so.putSFSObject("pokers", pokers);
+		pokers.putUtfString("b", "4");
 		return so;
 	}
-}//end E103BaccaratResponse
+}//end E108RouletteResponse

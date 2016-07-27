@@ -6,17 +6,17 @@ import com.smartfoxserver.v2.entities.data.SFSObject;
 /**
  * @author Administrator
  * @version 1.0
- * @created 25-七月-2016 16:55:54
+ * @created 27-七月-2016 17:58:37
  */
-public class E104BaccaratResponse extends EGameResponse {
+public class E111CaribbeanResponse extends EGameResponse {
 
-	public E104BaccaratResponse(){
+	public E111CaribbeanResponse(){
 
 	}
 
 	/**
 	 * 
-	 * @exception Throwable
+	 * @exception Throwable Throwable
 	 */
 	public void finalize()
 	  throws Throwable{
@@ -28,6 +28,10 @@ public class E104BaccaratResponse extends EGameResponse {
 	 * @param so    so
 	 */
 	public SFSObject responseData(SFSObject so){
-		return null;
+		so.putInt("r", 3);
+		SFSObject p = new SFSObject();
+		so.putSFSObject("p", p);
+		
+		return so;
 	}
-}//end E104BaccaratResponse
+}//end E111CaribbeanResponse
