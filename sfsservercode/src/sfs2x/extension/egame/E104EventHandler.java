@@ -19,11 +19,12 @@ public class E104EventHandler extends BaseClientRequestHandler {
 	@Override
 	public void handleClientRequest(User arg0, ISFSObject arg1) {
 		// TODO Auto-generated method stub
-		SFSObject so = new SFSObject();
+		
 		
 //		EGame game = EgameFactory.getGame();
 //		game.setRequest(new E104Request());
 //		game.sendData(so);
+		SFSObject so = new SFSObject();
 		so.putInt("errorCode", 0);
 		send("104",so,arg0);
 		getApi().logout(arg0);

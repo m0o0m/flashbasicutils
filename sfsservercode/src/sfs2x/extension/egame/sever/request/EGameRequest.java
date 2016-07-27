@@ -34,7 +34,8 @@ public class EGameRequest {
 	}
 
 	/**
-	 * 
+	 *在这里处理游戏种类与消息种类的具体的结合的具体代码执行;
+	 *这里通过反射封装了这种具体的判断;
 	 * @param obj    obj
 	 */
 	public SFSObject chooseData(SFSObject obj){

@@ -2,7 +2,8 @@ package sfs2x.extension.egame;
 
 import sfs2x.extension.egame.sever.EgameFactory;
 import sfs2x.extension.egame.sever.game.EGame;
-import sfs2x.extension.egame.sever.request.E103Request;
+import sfs2x.extension.egame.sever.request.E109Request;
+import sfs2x.extension.egame.sever.request.E110Request;
 
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
@@ -13,11 +14,11 @@ import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
 /**
  * @author Administrator
  * @version 1.0
- * @created 26-七月-2016 11:35:27
+ * @created 26-七月-2016 16:42:27
  */
-public class E103EventHandler extends BaseClientRequestHandler {
+public class E110EventHandler extends BaseClientRequestHandler {
 
-	public E103EventHandler(){
+	public E110EventHandler(){
 
 	}
 
@@ -31,12 +32,11 @@ public class E103EventHandler extends BaseClientRequestHandler {
 	 */
 	@Override
 	public void handleClientRequest(User arg0, ISFSObject arg1){
+		EGame game = EgameFactory.getGame();
+		game.setRequest(new E110Request("110"));
 		SFSObject so = new SFSObject();
-		/*EGame game = EgameFactory.getGame();
-		game.setRequest(new E103Request("103"));
-		game.sendData(so);*/
-		//103为自定义消息,发送一个custom 字符串给服务器;
-		so.putInt("errorCode", 0);
-		send("103",so,arg0);
+		game.sendData(so);
+		
+		send("110",so,arg0);
 	}
-}//end E103EventHandler
+}//end E110EventHandler

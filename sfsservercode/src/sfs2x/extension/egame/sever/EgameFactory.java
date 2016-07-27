@@ -2,6 +2,7 @@ package sfs2x.extension.egame.sever;
 
 import sfs2x.extension.egame.sever.game.BaccaratGame;
 import sfs2x.extension.egame.sever.game.EGame;
+import sfs2x.extension.egame.sever.game.SafeBlackJackGame;
 import sfs2x.extension.egame.sever.game.SicboGame;
 
 
@@ -36,7 +37,11 @@ public class EgameFactory {
 		case GameConfig.SICBO_ZONE:
 			game = new SicboGame();
 			break;
+		case GameConfig.SAFEBLACKJACK_ZONE:
+			game = new SafeBlackJackGame();
+			break;
 		}
+	
 		if(game ==null)
 		{
 			throw new Error("没有找到相关的空间:"+zoneName);

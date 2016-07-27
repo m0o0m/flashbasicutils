@@ -49,7 +49,7 @@ public class ELoginSicboResponse  extends EGameResponse {
 				
 				so_sa_so1 = new SFSObject();
 				so_sa.addSFSObject(so_sa_so1);
-				so_sa_so1.putUtfString("b", "5,2,3,10");
+				so_sa_so1.putUtfString("b", "5,2,3;10");
 				
 				outData.putUtfString("nickName", "houxl001");
 				outData.putDouble("balance", 501.7);

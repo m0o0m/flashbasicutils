@@ -28,10 +28,31 @@ public class EGameLogin extends SFSExtension {
 		addRequestHandler("108",E108EventHandler.class);
 		addRequestHandler("109",E109EventHandler.class);
 		addRequestHandler("104",E104EventHandler.class);
+		addRequestHandler("110",E110EventHandler.class);
+		addRequestHandler("103",E103EventHandler.class);
+		addRequestHandler("113",E113EventHandler.class);
+		addRequestHandler("111",E111EventHandler.class);
+		addRequestHandler("114",E114EventHandler.class);
+		addRequestHandler("107",E107EventHandler.class);
+		addRequestHandler("105",E105EventHandler.class);
+		addRequestHandler("106",E106EventHandler.class);
 	}
 	@Override
 	public void destroy()
 	{
+		removeEventHandler(SFSEventType.USER_LOGIN);
+		removeRequestHandler("101");
+		removeRequestHandler("108");
+		removeRequestHandler("109");
+		removeRequestHandler("104");
+		removeRequestHandler("110");
+		removeRequestHandler("113");
+		
+		removeRequestHandler("111");
+		removeRequestHandler("114");
+		removeRequestHandler("107");
+		removeRequestHandler("105");
+		removeRequestHandler("106");
 	    super.destroy();
 	}
 
