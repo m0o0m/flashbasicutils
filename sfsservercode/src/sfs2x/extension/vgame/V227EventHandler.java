@@ -12,13 +12,21 @@ import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
  * @created 03-八月-2016 16:36:50
  */
 public class V227EventHandler extends BaseClientRequestHandler {
-
+	public SFSObject so = new SFSObject();
 	public V227EventHandler(){
-
+		initData();
 	}
 
 	public void finalize() throws Throwable {
 		super.finalize();
+	}
+	public void initData(){
+		
+		so.putInt("p",176);
+		 so.putUtfString("s","14102800002");
+		 so.putDouble("t",820697.0499999999);
+		 so.putUtfString("g","Baccarat");
+		
 	}
 	/**
 	 * 
@@ -28,13 +36,10 @@ public class V227EventHandler extends BaseClientRequestHandler {
 	@Override
 	public void handleClientRequest(User arg0, ISFSObject arg1){
 		
-		SFSObject so_14436 = new SFSObject();
-		 so_14436.putInt("p",94);
-		 so_14436.putUtfString("s","15092300018");
-		 so_14436.putDouble("t",820697.0499999999);
-		 so_14436.putUtfString("g","Dice");
+		
 		 
 
-		 send("227",so_14436,arg0);
+		 send("227",so,arg0);
+		 
 	}
 }//end V227EventHandler

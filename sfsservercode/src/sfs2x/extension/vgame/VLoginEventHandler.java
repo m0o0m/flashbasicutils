@@ -8,6 +8,7 @@ import sfs2x.extension.vgame.server.request.VLoginRequest;
 import com.smartfoxserver.v2.core.ISFSEvent;
 import com.smartfoxserver.v2.core.SFSEventParam;
 import com.smartfoxserver.v2.entities.SFSZone;
+import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
 import com.smartfoxserver.v2.entities.data.SFSObject;
 import com.smartfoxserver.v2.exceptions.SFSException;
@@ -38,7 +39,9 @@ public class VLoginEventHandler extends BaseServerEventHandler {
 	  throws SFSException{
 		// TODO Auto-generated method stub
 		String userName = (String) event.getParameter(SFSEventParam.LOGIN_NAME);
-		//User user =(User) event.getParameter(SFSEventParam.USER);
+		User user =(User) event.getParameter(SFSEventParam.USER);
+		GameConfig.loginUser = user;
+		GameConfig.SFSExtion = this.getParentExtension();
 		//ISFSObject sfso = new SFSObject();
 		//The custom data to return to the user after a successful login 
 		//用户还没有登录到系统中,所以没有user
@@ -49,5 +52,7 @@ public class VLoginEventHandler extends BaseServerEventHandler {
 		VGame game = VgameFactory.createEgame(zone.getName());
 		game.setRequest(new VLoginRequest("Login"));
 		game.sendData((SFSObject)outData);
+		
+		
 	}
 }//end VLoginEventHandler

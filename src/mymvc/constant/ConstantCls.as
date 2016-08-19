@@ -13,7 +13,7 @@ package mymvc.constant
 
 	/**
 	 * 传递值为class,实现统一生产不同类;
-	 * 利用字符串做引用,在变更类后无需多处修改, 
+	 * 利用字符串做引用,在变更类后无需多处修改, 例如常量VIEW_TESTVIEW会多处使用到,改变这里绑定的类即可改变所有使用到的地方;
 	 * @author Administrator
 	 * 
 	 */
@@ -78,7 +78,7 @@ package mymvc.constant
 					return name;
 				}
 			}
-			return "";
+			return ""; 
 		}
 	}
 }

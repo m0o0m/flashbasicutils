@@ -56,6 +56,13 @@ package com.wg.mvc
 			}
 		}
 		
+		/**
+		 *根据 传入的类类型创建并保存这个类实例;
+		 * @param typeClass
+		 * @param name
+		 * @return 
+		 * 
+		 */
 		protected function createObjectBase(typeClass:Class, name:String) : *
 		{
 			var module:* = _nameHash[name];

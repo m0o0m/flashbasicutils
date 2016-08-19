@@ -3,6 +3,7 @@ package sfs2x.extension.vgame.server;
 import com.smartfoxserver.v2.exceptions.SFSException;
 
 import sfs2x.extension.vgame.server.game.HallGame;
+import sfs2x.extension.vgame.server.game.VBaccGame;
 import sfs2x.extension.vgame.server.game.VGame;
 
 
@@ -42,6 +43,9 @@ public class VgameFactory {
 	switch(zoneName){
 	case GameConfig.HALL:
 		game = new HallGame();
+		break;
+	case GameConfig.BACC:
+		game = new VBaccGame();
 		break;
 	}
 	if(game ==null)

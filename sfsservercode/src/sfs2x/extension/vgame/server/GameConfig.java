@@ -2,6 +2,9 @@ package sfs2x.extension.vgame.server;
 
 import java.util.HashMap;
 
+import com.smartfoxserver.v2.entities.User;
+import com.smartfoxserver.v2.extensions.SFSExtension;
+
 
 /**
  * @author Administrator
@@ -10,9 +13,12 @@ import java.util.HashMap;
  */
 public class GameConfig {
 
+	public static  SFSExtension SFSExtion;
 	public static String gameType;
 	public static final String HALL = "hall";
+	public static final String BACC = "bacc";
 	public static HashMap<String,String> hm=new HashMap<String,String>() ;
+	public static User loginUser;
 	public GameConfig(){
 	}
 

@@ -17,6 +17,7 @@ package com.wg.mvc
 			if(!cls)
 			{
 				Log.error("传入的对像为空");
+				return null;
 			}
 			return new cls();
 		}

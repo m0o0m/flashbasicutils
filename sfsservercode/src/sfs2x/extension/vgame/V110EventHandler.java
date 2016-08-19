@@ -1,5 +1,6 @@
 package sfs2x.extension.vgame;
 
+import com.smartfoxserver.v2.entities.Room;
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
 import com.smartfoxserver.v2.entities.data.SFSArray;
@@ -64,7 +65,7 @@ public class V110EventHandler extends BaseClientRequestHandler {
 		 so_44062_sa_56656_so_86124_sa_99832_so_77763.putInt("mi",100);
 		   so_44062_sa_56656_so_86124.putUtfString("sn","S07");
 		 so_44062_sa_56656_so_86124.putDouble("inGameLimit",0);
-		 so_44062_sa_56656_so_86124.putUtfString("si","gp.mayavg.com");
+		 so_44062_sa_56656_so_86124.putUtfString("si","127.0.0.1");
 		  SFSObject so_44062_sa_56656_so_69526 = new SFSObject();
 		so_44062_sa_56656.addSFSObject(so_44062_sa_56656_so_69526);
 		 so_44062_sa_56656_so_69526.putUtfString("sp","9501");
@@ -99,10 +100,10 @@ public class V110EventHandler extends BaseClientRequestHandler {
 		 so_44062_sa_56656_so_69526_sa_15862_so_56240.putInt("mi",100);
 		   so_44062_sa_56656_so_69526.putUtfString("sn","S01");
 		 so_44062_sa_56656_so_69526.putDouble("inGameLimit",0);
-		 so_44062_sa_56656_so_69526.putUtfString("si","gp.mayavg.com");
+		 so_44062_sa_56656_so_69526.putUtfString("si","127.0.0.1");
 		  SFSObject so_44062_sa_56656_so_30529 = new SFSObject();
 		so_44062_sa_56656.addSFSObject(so_44062_sa_56656_so_30529);
-		 so_44062_sa_56656_so_30529.putUtfString("sp","9502");
+		 so_44062_sa_56656_so_30529.putUtfString("sp","9933");
 		 so_44062_sa_56656_so_30529.putUtfString("s","14102800002");
 		 so_44062_sa_56656_so_30529.putUtfString("g","Baccarat");
 		 SFSArray so_44062_sa_56656_so_30529_sa_2660 = new SFSArray();
@@ -134,7 +135,7 @@ public class V110EventHandler extends BaseClientRequestHandler {
 		 so_44062_sa_56656_so_30529_sa_2660_so_49797.putInt("mi",100);
 		   so_44062_sa_56656_so_30529.putUtfString("sn","S02");
 		 so_44062_sa_56656_so_30529.putDouble("inGameLimit",0);
-		 so_44062_sa_56656_so_30529.putUtfString("si","gp.mayavg.com");
+		 so_44062_sa_56656_so_30529.putUtfString("si","127.0.0.1");
 		  SFSObject so_44062_sa_56656_so_78490 = new SFSObject();
 		so_44062_sa_56656.addSFSObject(so_44062_sa_56656_so_78490);
 		 so_44062_sa_56656_so_78490.putUtfString("sp","9503");
@@ -169,7 +170,7 @@ public class V110EventHandler extends BaseClientRequestHandler {
 		 so_44062_sa_56656_so_78490_sa_61121_so_14253.putInt("mi",100);
 		   so_44062_sa_56656_so_78490.putUtfString("sn","S03");
 		 so_44062_sa_56656_so_78490.putDouble("inGameLimit",0);
-		 so_44062_sa_56656_so_78490.putUtfString("si","gp.mayavg.com");
+		 so_44062_sa_56656_so_78490.putUtfString("si","127.0.0.1");
 		  SFSObject so_44062_sa_56656_so_91941 = new SFSObject();
 		so_44062_sa_56656.addSFSObject(so_44062_sa_56656_so_91941);
 		 so_44062_sa_56656_so_91941.putUtfString("sp","9505");
@@ -204,7 +205,7 @@ public class V110EventHandler extends BaseClientRequestHandler {
 		 so_44062_sa_56656_so_91941_sa_66789_so_21146.putInt("mi",100);
 		   so_44062_sa_56656_so_91941.putUtfString("sn","S05");
 		 so_44062_sa_56656_so_91941.putDouble("inGameLimit",0);
-		 so_44062_sa_56656_so_91941.putUtfString("si","gp.mayavg.com");
+		 so_44062_sa_56656_so_91941.putUtfString("si","127.0.0.1");
 		  SFSObject so_44062_sa_56656_so_31734 = new SFSObject();
 		so_44062_sa_56656.addSFSObject(so_44062_sa_56656_so_31734);
 		 so_44062_sa_56656_so_31734.putUtfString("sp","9504");
@@ -239,10 +240,18 @@ public class V110EventHandler extends BaseClientRequestHandler {
 		 so_44062_sa_56656_so_31734_sa_54032_so_30187.putInt("mi",100);
 		   so_44062_sa_56656_so_31734.putUtfString("sn","S06");
 		 so_44062_sa_56656_so_31734.putDouble("inGameLimit",0);
-		 so_44062_sa_56656_so_31734.putUtfString("si","gp.mayavg.com");
+		 so_44062_sa_56656_so_31734.putUtfString("si","127.0.0.1");
 		 	 
 		send("110",so_44062 ,arg0);
 		V204EventHandler v204 = new V204EventHandler();
-		v204.handleClientRequest(arg0, arg1);
+		this.getParentExtension().send("204", v204.so_85779, arg0);//百家乐
+		this.getParentExtension().send("204", v204.so_14605, arg0);//骰宝
+		//getApi().sendExtensionResponse("204", v204.so_14605, arg0, (Room) arg0.getLastJoinedRoom(), false);
+		
+		V226EventHandler v226 = new V226EventHandler();
+		this.getParentExtension().send("226", v226.so_36357, arg0);
+		this.getParentExtension().send("226", v226.so_56018, arg0);
+		V227EventHandler v227 = new V227EventHandler();
+		this.getParentExtension().send("227", v227.so, arg0);
 	}
 }//end V110EventHandler

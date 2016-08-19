@@ -1,6 +1,7 @@
 package com.wg.mvc 
 {
 	import com.wg.logging.Log;
+	import com.wg.mvc.command.CommadSubBase;
 	import com.wg.mvc.command.interfaces.ICommand;
 	import com.wg.mvc.interfaces.data.IData;
 	import com.wg.mvc.interfaces.event.IServerNotifier;
@@ -102,7 +103,7 @@ package com.wg.mvc
 		 * 回调view层注册的响应函数;
 		 * @param event
 		 * @param data 为服务器通讯模块指定类型
-		 * 
+		 * data层的notifyEvent,提供给view层,注册的data通知数据改变时,view响应这种数据改变;
 		 */
 		public function notifyEvent(event:String, data:*=null) : void
 		{
@@ -111,9 +112,11 @@ package com.wg.mvc
 			if(!tempCommand)
 			{
 				Log.warn(event+" 消息不存在或是在Constant中没有配置常量");
-				return;
+				//throw new Error(event+" 消息不存在或是在Constant中没有配置常量");//如果注销,支持每个data响应的命令可以不用注册绑定一个具体的command;
+				tempCommand = new CommadSubBase();
 			}
-			tempCommand.excute(data);
+				tempCommand.excute(data);
+			
 			
 			var handlers:* = _eventHandlers[event];
 			if (handlers) {

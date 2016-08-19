@@ -147,6 +147,9 @@ package views.utiltest
 				case "bool":
 					addChildNode("Bool");
 					break;
+				case "short":
+					addChildNode("Short");
+					break;
 			}
 		}
 		private function changeParentByLevel():void
@@ -167,7 +170,12 @@ package views.utiltest
 		}
 		private function addChildNode(funcName:String,isNumber:Boolean = true):void
 		{
-			
+			var otherCode:String = "";
+			if(funcName=="Short")
+			{
+				otherCode = "(short)";
+			}
+			_value = otherCode+_value;
 			
 			if(isNumber){
 				if(_parent.codetype=="sfs_object"){

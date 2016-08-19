@@ -2,6 +2,7 @@ package com.wg.mvc
 {
 	import com.wg.logging.Log;
 	import com.wg.mvc.ClientConstants;
+	import com.wg.mvc.command.CommadSubBase;
 	import com.wg.mvc.command.interfaces.ICommand;
 	import com.wg.mvc.interfaces.views.IView;
 	import com.wg.resource.ResourceLoader;
@@ -73,13 +74,20 @@ package com.wg.mvc
 			}			
 		}
 		
+		/**
+		 *通知事件:触发某事件,开始执行注册的回调函数; 
+		 * @param event
+		 * @param data
+		 * 
+		 */
 		public function notifyEvent(event:String, data:*=null) : void
 		{
 			var tempCommand:ICommand = MVCManager.getCommand(event);
 			if(!tempCommand)
 			{
 				Log.warn(event+" 消息不存在或是在Constant中没有配置常量");
-				return;
+				//throw new Error(event+" 消息不存在或是在Constant中没有配置常量");//如果注销,支持每个data响应的命令可以不用注册绑定一个具体的command;
+				tempCommand = new CommadSubBase();
 			}
 			tempCommand.excute(data);
 			

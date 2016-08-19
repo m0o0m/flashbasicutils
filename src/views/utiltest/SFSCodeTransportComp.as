@@ -43,7 +43,8 @@ package views.utiltest
 				var tempstr:String = dataArr[i]+"end";
 				var objectType:String = StringUtil.getBetween(tempstr,"(",")");
 				var key:String = StringUtil.getBetween(tempstr,") ",": ");
-				var value:String = StringUtil.getBetween(tempstr,": ","end");
+				var value:String = StringUtil.getBetween(tempstr,": ","end");//这里是object的处理方式
+				if(!value) value = StringUtil.getBetween(tempstr,") ","end");//这里是数组的处理方式
 				var level:int = StringUtil.strAmount(tempstr,"\t");
 				el2.level = level;
 				el2.key = key;

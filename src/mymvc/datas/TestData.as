@@ -21,6 +21,7 @@ package mymvc.datas
 		private function refreshroledata(message:ICommand):void
 		{
 			_name = message.getData().name;
+			notifyEvent(ConstantCls.COMMAD_SERVER_GETROLEINFO);
 		}
 	}
 }

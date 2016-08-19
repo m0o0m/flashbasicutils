@@ -23,8 +23,14 @@ package com.wg.resource
 		private var _resourceManager:ResourceManager;
 		private var _resourceLoaderInfo:ResourceLoaderInfo;
 		
+		/**
+		 *保存所有的url 
+		 */
 		private var _loaderList:Array = [];
 		
+		/**
+		 *存储使用者传递进来的各种回调函数 
+		 */
 		private var _callbackList:Array = [];
 		private var _loaderStatus:Boolean = false;
 		
@@ -164,7 +170,10 @@ package com.wg.resource
 			
 			return imageLoaderData;
 		}
-		
+		/**
+		 *开始加载一个资源 
+		 * 
+		 */		
 		private function loadOne():void
 		{
 			if (this._loaderList.length > 0) {
@@ -195,6 +204,12 @@ package com.wg.resource
 			}
 		}
 		
+		/**
+		 *开始加载前,改变一些加载时用到的参数 
+		 * @param resourceLoaderData
+		 * @param status
+		 * 
+		 */
 		private function validLoader(resourceLoaderData:ResourceLoaderData, status:Boolean = false):void
 		{
 			var loaderIndex:int = this.getCallbackIndexByValue(resourceLoaderData.key);

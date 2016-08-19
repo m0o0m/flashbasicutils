@@ -64,7 +64,6 @@ package com.wg.layout
 			txt.y = index*50;
 			this.addChild(txt);
 			txt.visible = _debugShow;
-			
 		}
 	}
 }

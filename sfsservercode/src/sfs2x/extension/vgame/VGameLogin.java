@@ -29,14 +29,18 @@ public class VGameLogin extends SFSExtension {
 	@Override
 	public void init(){
 		GameConfig.hm.put(GameConfig.HALL, "Hall");
+		GameConfig.hm.put(GameConfig.BACC, "Bacc");
 		addEventHandler(SFSEventType.USER_LOGIN, VLoginEventHandler.class);
 		addRequestHandler("101",PingEventHandler.class);
 		addRequestHandler("104",V104EventHandler.class);
 		addRequestHandler("110",V110EventHandler.class);
 		addRequestHandler("201",V201EventHandler.class);
 		addRequestHandler("202",V202EventHandler.class);
-		addRequestHandler("204",V204EventHandler.class);
+		//addRequestHandler("204",V204EventHandler.class);
 		addRequestHandler("226",V226EventHandler.class);
 		addRequestHandler("227",V227EventHandler.class);
+		addRequestHandler("114",V114EventHandler.class);
+		addRequestHandler("230",V230EventHandler.class);
+		
 	}
 }//end VGameLogin

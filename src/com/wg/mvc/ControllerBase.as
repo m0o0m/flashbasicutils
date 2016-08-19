@@ -18,7 +18,7 @@
 		
 
 		/**
-		 * 
+		 * 首先执行 data中的回调函数,然后是view;最后是control
 		 * @param commandname
 		 * @param data
 		 * 

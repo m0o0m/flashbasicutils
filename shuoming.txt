@@ -226,6 +226,8 @@ http://docs2x.smartfoxserver.com/
 2.变量测试
 3.发送消息测试
 
+一个客户端可以创建多个new SmartFox(_isDebug);,连接不同的服务器并设置一些参数
+
 服务端:
 1.使用java扩展验证用户账号密码
 2.数据库的绑定和使用
