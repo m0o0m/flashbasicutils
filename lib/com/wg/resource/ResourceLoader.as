@@ -300,5 +300,4 @@ package com.wg.resource
 		}
 	}
 }
-import com.wg.resource;
 

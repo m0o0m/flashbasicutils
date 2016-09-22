@@ -25,6 +25,9 @@ package
 		public function Main()
 		{
 			super();
+			if (CONFIG::debug) {
+				trace(CONFIG::version);
+			}
 			ViewBase._stage = this.stage;
 			Config.stage = this.stage;
 			Config.resourceLoader = new ResourceLoader();
