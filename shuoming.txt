@@ -232,3 +232,10 @@ http://docs2x.smartfoxserver.com/
 1.使用java扩展验证用户账号密码
 2.数据库的绑定和使用
 3.系统消息和自定义消息的接受,处理和发送
+============= as项目外部编译============
+1.需要flex 相应的sdk   C:\Program Files\Adobe\Adobe Flash Builder 4.7 (64 Bit)\sdks\4.6.0
+2.需要 flashlayerglobal.swc  C:\Program Files\Adobe\Adobe Flash Builder 4.7 (64 Bit)\sdks\4.6.0\frameworks\libs\player\20.0.0\playerglobal.swc
+3.需要flashplayer播放器   C:\Program Files\Adobe\Adobe Flash Builder 4.7 (64 Bit)\player\win\21.0.0\FlashPlayerDebugger.exe
+扩展jar引用,
+cmd执行,可以在配置中直接引入
+flash builder 需要添加到引用库中;
