@@ -27,11 +27,11 @@ package pg1
 			 var child3:Class1Child3 = new Class1Child3();
 			
 			//同包子类
-			//child1.func1();//public 可以读取	c
-			//child1.func2();//internal 可以读取	c
-			//child1.func3();//protected 可以读取 (在父类中读取子类实例) p
+			child1.func1();//public 可以读取	c
+			child1.func2();//internal 可以读取	c
+			child1.func3();//protected 可以读取 (在父类中读取子类实例) p
 			//child1.func4();//private 无法读取
-			//(child1 as Class1).func4();//当被当做父类型时,在父类内部可调用父类
+			(child1 as Class1).func4();//当被当做父类型时,在父类内部可调用父类
 			//顶层包
 			child2.func1();//c 当父类方法可以被重写时,子类重写后,外部根据包情况选择读取子类或父类的可以用的方法;
 			child2.func2();//p 当无法读取子类的方法的时候,读取父类可用的
