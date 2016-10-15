@@ -70,6 +70,9 @@ package views
 			
 			viewvector[16] = new JiaMiView();
 			dic[viewvector[16].panelName] = 16;
+			
+			viewvector[17] = new AlertView();
+			dic[viewvector[17].panelName] = 17;
 		}
 		
 		/**
