@@ -7,10 +7,10 @@ package com.wg.assets
 	public class TextFieldUtils
 	{
 		public static var TEXT_FONT_NAME:String = "";
-		public static var TEXT_FONT_SIZE:int = 0;
+		public static var TEXT_FONT_SIZE:int = 12;
 		
 		public static var NUMBER_FONT_NAME:String = "";
-		public static var NUMBER_FONT_SIZE:int = 0;
+		public static var NUMBER_FONT_SIZE:int = 12;
 		public static const QUEST_TITLE_SIZE:int = 12;
 		
 		public static function setText(textField:TextField, text:String, number:Boolean = false, font:String = "", size:int = 0):void

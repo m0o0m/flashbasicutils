@@ -122,11 +122,11 @@ package views
 			content.list_bg_mc.label2.text = "选中的索引为：" + event.index;
 		}
 		
-		private var _scroll:ScrollBar;
+		private var _scroll:com.wg.ui.scrollBar.ScrollBar;
 		private var topLittleButtonArr:Array = [];
 		private function initScrollBar():void
 		{
-			_scroll =new ScrollBar(_stage,content["scroll_mc"],content["mask_mc"],content["slider_mc"],content["scroll_bg"]);
+			_scroll =new com.wg.ui.scrollBar.ScrollBar(_stage,content["scroll_mc"],content["mask_mc"],content["slider_mc"],content["scroll_bg"]);
 			
 			_scroll.direction="L";				 //方向——左右滚动为"H"，上下滚动为"L"。[默认:"L"]
 			_scroll.tween=2;       		 	 //缓动——1为不缓动，数字越大缓动越明显。[默认:5]

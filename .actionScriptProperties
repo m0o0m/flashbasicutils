@@ -32,7 +32,9 @@
       </libraryPathEntry>
       <libraryPathEntry kind="1" linkType="1" path="lib/swc"/>
     </libraryPath>
-    <sourceAttachmentPath/>
+    <sourceAttachmentPath>
+      <sourceAttachmentPathEntry kind="3" linkType="1" path="F:/workspace/basicutilstest/flashbasicutils/lib/swc/NewSrollBar.swc" sourcepath="fla" useDefaultLinkType="false"/>
+    </sourceAttachmentPath>
   </compiler>
   <applications>
     <application path="Main.as"/>

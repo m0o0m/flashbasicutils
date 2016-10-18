@@ -73,6 +73,9 @@ package views
 			
 			viewvector[17] = new AlertView();
 			dic[viewvector[17].panelName] = 17;
+			
+			viewvector[18] = new ChatView();
+			dic[viewvector[18].panelName] = 18;
 		}
 		
 		/**
