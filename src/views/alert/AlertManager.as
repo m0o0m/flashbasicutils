@@ -1,11 +1,15 @@
 package views.alert
 {
 	import flash.display.MovieClip;
+	import flash.display.Sprite;
 
 	/**
 	 *弹出指定的弹出框,如果没有设定弹出框,那么指定默认的; 
 	 * @author Administrator
-	 * 
+	 * 组件特征:
+	 * 1.只有提示内容
+	 * 2.拥有确定和取消按钮
+	 * 3.关闭按钮
 	 */
 	public class AlertManager
 	{
@@ -34,6 +38,7 @@ package views.alert
 
 		 public function clear() : void
 		{
+			 close();
 			 _alert = null;
 			return;
 		}
@@ -70,6 +75,10 @@ package views.alert
 		
 		public function showYesNoMsg(alertInfoTxt:String, yesBtnTxt:String = "确定", noBtnTxt:String = "取消", closeFunc:Function = null,showCheckBox:Boolean = false) : void
 		{
+			if(!_alert)
+			{
+				setAlert();
+			}
 			if(this.inStage) return;
 			
 			if(yesBtnTxt == "确定")
@@ -88,6 +97,10 @@ package views.alert
 		
 		public function showYes(alertInfoTxt:String, yesBtnTxt:String = "确定",  closeFunc:Function = null,showCheckBox:Boolean = false) : void
 		{
+			if(!_alert)
+			{
+				setAlert();
+			}
 			if(this.inStage) return;
 			
 			if(yesBtnTxt == "确定")
@@ -112,11 +125,19 @@ package views.alert
 			}
 		}
 		
-		public function setAlert(mc:MovieClip,layer:*) : void
+		public function setAlert(mc:MovieClip = null,layer:Sprite = null) : void
 		{
+			if(!mc){
+				//var cls:Class= view.resourceLoader.getClass("Alert");
+//				mc = new cls();
+			}
+			if(!layer)
+			{
+//				layer = alertlayer;
+			}
 			if (!_alert)
 			{
-//				var cls:Class= view.resourceLoader.getClass("Alert");
+
 				_alert =(new AlertComp(mc)) as IAlert;
 				//_alert.onLoadLang = onLoadLang;
 				_alert.oParent = layer;

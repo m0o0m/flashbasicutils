@@ -2,6 +2,11 @@ package views.alert
 {
 	import flash.display.Sprite;
 
+	/**
+	 *定义alert的组件接口,所有的alert的组件需满足 
+	 * @author Administrator
+	 * 
+	 */
 	public interface IAlert
 	{
 		
