@@ -15,9 +15,44 @@ package test
 	 * 
 	 * Event:事件类型;EventDispatcher类规定键值对为: Event:Function [];
 	 * 
+	 * 自定义事件发送者的三种方法
+	 * http://blog.csdn.net/aisajiajiao/article/details/6960475
 	 * @author Administrator
 	 * 
 	 */
+	/**
+	 * 一.显示对象的鼠标点击事件
+	 * 1.逐层传递
+	 * 2.父类,自身,子类
+	 * 3.可以设置子类不接收;只有注册了事件才可以响应;可以设置冒泡阶段或捕获阶段响应
+	 * 4.只有在同一显示链条上的对象才可以有以上特性
+	 * @author Administrator
+	 * 
+	 */	
+	/**
+	 *二. EventDispatcher类和Event类
+	 * EventDispatcher类,拥有
+	 * addEventListener
+	 * dispatchEvent
+	 * hasEventListener等
+	 * 注册的
+	 * Event类,拥有
+	 * clone(),bubbles,cancelable,currentTarget,eventPhase,target,type等属性方法
+	 * event,数据的载体,
+	 * @author Administrator
+	 * 
+	 */	
+	/**
+	 * 三.扩展EventDispatcher类和Event类
+	 * EventDispatcher类职责:
+	 * 1.存储注册的回调函数,
+	 * 2.注册回调函数
+	 * 3.发送event事件
+	 * 4.响应注册的event事件
+	 * 以上所有的操作,只有当前扩展类的实例可以做,其它扩展类互不干涉;
+	 * @author Administrator
+	 * 
+	 */	
 	public class eventtest extends Sprite
 	{
 		public static var sampleeventdipat:SampleEventDispatcher; 

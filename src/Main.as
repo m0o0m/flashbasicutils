@@ -33,15 +33,15 @@ package
 			Config.resourceLoader = new ResourceLoader();
 			Config.uri = new URI();
 			Config.viewManger = new ViewManager();
-			
+			Context.getInstance().initialize(this,"1.2.3.5000","false","false");
 			
 			Config.viewManger.showPanel("ui",1,2,3);//主界面;只执行一次;
 			Config.viewManger.showPanel("stimliLoad");
 			this.addEventListener(Event.ADDED_TO_STAGE,function (e:Event):void{
 				
 			});
-			MonsterDebugger.initialize(this);
-			MonsterDebugger.trace(this, "Hello Monster dsFlashClient cn");
+		/*	MonsterDebugger.initialize(this);
+			MonsterDebugger.trace(this, "Hello Monster dsFlashClient cn");*/
 		}
 		
 		
