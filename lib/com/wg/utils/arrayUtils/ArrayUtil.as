@@ -269,7 +269,17 @@ package com.wg.utils.arrayUtils
 			}
 			return arr;
 		}
-		
+		public static function randomSortArr2($arr:Array):Array
+		{
+			var arr:Array = $arr.slice();
+			var shuffledDeck:Array = new Array();
+			while (arr.length > 0) {
+				var r:int = Math.floor(Math.random()*arr.length);
+				shuffledDeck.push(arr[r]);
+				arr.splice(r,1);
+			}
+			return arr;
+		}
 		/**
 		 * 设置目标数组的长度
 		 * @param 目标数组

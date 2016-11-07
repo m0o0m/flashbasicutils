@@ -129,6 +129,12 @@ package com.wg.resource
 			return new Bitmap(bitmap.bitmapData.clone());
 		}
 		
+		/**
+		 *通过swf的名称获取swf实例 
+		 * @param path
+		 * @return 
+		 * 
+		 */
 		public function getContent(path:String):*
 		{
 			var imageLoaderData:ResourceLoaderData = this._resourceManager.getResource(path);
@@ -147,11 +153,14 @@ package com.wg.resource
 		
 		public function getClass(className:String, keyName:String = ""):Class
 		{
-			if(keyName == null || keyName == "") keyName = className;
+			if(keyName == null || keyName == ""){
+				keyName = className;
+			}
 			
 			var imageLoaderData:ResourceLoaderData = this._resourceManager.getResource(keyName);
 			if (imageLoaderData == null || imageLoaderData.loaderInfo == null) {
 				Log.error("没有找到class相关的键值对 "+"keyName:"+keyName,"className:"+className);
+				trace("没有找到class相关的键值对 "+"keyName:"+keyName,"className:"+className);
 				return null;
 			}
 			var cls:Class = imageLoaderData.loaderInfo.applicationDomain.getDefinition(className) as Class;
@@ -165,6 +174,7 @@ package com.wg.resource
 			var imageLoaderData:ResourceLoaderData = this._resourceManager.getResource(keyName);
 			if (imageLoaderData == null || imageLoaderData.loaderInfo == null) {
 				Log.error("没有找到swf相关的键值对 "+"keyName:"+keyName,"className:"+className);
+				trace("没有找到swf相关的键值对 "+"keyName:"+keyName,"className:"+className);
 				return null;
 			}
 			
@@ -182,6 +192,7 @@ package com.wg.resource
 				var resourceLoaderData:ResourceLoaderData = this._loaderList.pop() as ResourceLoaderData;
 				if(resourceLoaderData == null){
 					Log.error(resourceLoaderData.path+"或"+resourceLoaderData.key+" 没有找到");
+					trace(resourceLoaderData.path+"或"+resourceLoaderData.key+" 没有找到");
 					return;
 				}
 				
@@ -201,6 +212,7 @@ package com.wg.resource
 				}
 			}else{
 				this._loaderStatus = false;
+				trace("this._loaderList.length"+" = 0");
 			}
 		}
 		

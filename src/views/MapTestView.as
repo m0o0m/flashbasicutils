@@ -20,6 +20,7 @@ package views
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
 	import flash.media.Camera;
+	import flash.text.TextField;
 	import flash.utils.getTimer;
 	
 	import mymap.elements.BgElement;
@@ -129,11 +130,12 @@ package views
 			//pre init
 			//设置镜头
 			Config.camera = new SceneCamera(_stage,this);
-			Config.camera.setCameraSize(stage.stageWidth, stage.stageHeight);//camera.setCameraSize(stage.stageWidth, stage.stageHeight);
+			Config.camera.setCameraSize(stage.stageWidth, stage.stageHeight);
+			//camera.setCameraSize(stage.stageWidth, stage.stageHeight);
 
-//			Scheduler.getInstance().addTickedObject(Config.camera);
-//			Scheduler.getInstance().addAnimatedObject(Config.camera);
-			
+			//Scheduler.getInstance().addTickedObject(Config.camera);
+			//Scheduler.getInstance().addAnimatedObject(Config.camera);
+			content
 			mapscene = new Mapscene();
 			mapscene.camera = Config.camera;
 			Config.mapscene = mapscene;
@@ -147,7 +149,9 @@ package views
 			//激活此屏幕;
 			mapscene.activeScene();
 			
-			
+			var textf:TextField = new TextField();
+			textf.text = "111111111111111111111111111111111111111111111111111111111111";
+			mapscene.addChild(textf);
 			Config.sceneManager = new SceneManager();
 			
 			registSceneListenerHandler();
@@ -155,7 +159,7 @@ package views
 			Scheduler.getInstance().start();
 			
 			//模拟地图加载完毕;
-			//			changedToMapSceneCompleteHandler();
+//						changedToMapSceneCompleteHandler();
 			
 			//			testMapscene();
 		}

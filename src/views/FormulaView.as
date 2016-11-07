@@ -2,13 +2,15 @@ package views
 {
 	import com.wg.scene.astar.NodeGrid;
 	
+	import flash.events.MouseEvent;
+	
 	import fl.controls.CheckBox;
 	import fl.controls.LabelButton;
 	
-	import flash.events.MouseEvent;
-	
-	import views.formula.AStar.GridView;
 	import views.formula.Sanjiao;
+	import views.formula.AStar.GridView;
+	import views.formula.basicAnimate.BasicAnmateMC;
+	import views.formula.hitest.HitTest_Test;
 	import views.formula.mapScene.Moveformula;
 
 	public class FormulaView extends ViewBase
@@ -30,12 +32,21 @@ package views
 				content.mainBtn1.addEventListener(MouseEvent.CLICK,sanjiaoHandler);
 				content.mainBtn2.addEventListener(MouseEvent.CLICK,yidongHandler);
 				content.mainBtn3.addEventListener(MouseEvent.CLICK,aStarHandler);
+				content.mainBtn4.addEventListener(MouseEvent.CLICK,basicAnimHandler);
+				content.mainBtn5.addEventListener(MouseEvent.CLICK,basicHitHandler);
 				map1cls = Config.resourceLoader.getClass("sanjiaocomp",panelName);
 				map2cls = Config.resourceLoader.getClass("movecomp",panelName);
+				map3cls = Config.resourceLoader.getClass("basicanimcomp",panelName);
+				//map3cls = Config.resourceLoader.getClass("basicanimcomp",panelName);
 			}
 			super.render();
 		}
 		private var _sanjiao:Sanjiao;
+		/**
+		 *三角函数模拟 
+		 * @param e
+		 * 
+		 */
 		private function sanjiaoHandler(e:MouseEvent):void
 		{
 			// TODO Auto Generated method stub
@@ -45,6 +56,11 @@ package views
 		}
 		private var map2cls:Class;
 		private var _move:Moveformula;
+		/**
+		 *人物场景移动 
+		 * @param e
+		 * 
+		 */
 		private function yidongHandler(e:MouseEvent):void
 		{
 			content.content.removeChildren();
@@ -54,6 +70,11 @@ package views
 		
 		private var _grid:NodeGrid;
 		private var _gridView:GridView;
+		/**
+		 *A星寻路 
+		 * @param e
+		 * 
+		 */
 		private function aStarHandler(e:MouseEvent):void
 		{
 			content.content.removeChildren();
@@ -82,6 +103,27 @@ package views
 			_gridView.y=100;
 			content.content.addChild(_gridView);
 		}
+		private var basicanimMc:BasicAnmateMC;
+		private var map3cls:Class;
 		
+		private function basicAnimHandler(e:MouseEvent):void
+		{
+			content.content.removeChildren();
+			if(!basicanimMc) basicanimMc = new BasicAnmateMC(new map3cls());
+			content.content.addChild(basicanimMc.content);
+		}
+		
+		/**
+		 *碰撞检测代码 
+		 * @param e
+		 * 
+		 */
+		private var hitTest_test:HitTest_Test;
+		private function basicHitHandler(e:MouseEvent):void
+		{
+			content.content.removeChildren();
+			if(!hitTest_test) hitTest_test = new HitTest_Test();
+			content.content.addChild(hitTest_test);
+		}
 	}
 }

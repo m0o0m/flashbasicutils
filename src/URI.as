@@ -3,6 +3,7 @@ package
 	public class URI
 	{
 		public var panelPath:String = "assets/panels/";
+		public var simpleMapPath:String = "assets/simplemap/";
 		public var townMapPath:String = "assets/map/town/";
 		public var mapPath:String = "assets/map/";
 		public var buttonIconPath:String = "assets/icons/roles/Button/";
@@ -90,6 +91,10 @@ package
 		public function getPanelURI(panel:String) : String
 		{
 			return (this.panelPath + panel + ".swf");
+		}
+		public function getSimpleMapURI(panel:String) : String
+		{
+			return (this.simpleMapPath + panel + ".swf");
 		}
 		public function getTownMapConfigURI(id:*):String
 		{

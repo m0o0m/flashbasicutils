@@ -240,7 +240,7 @@ Other Useful Stuff: HMAC, Random, TLS-PRF, some ASN-1/DER parsing
 		
 		override public function close():void
 		{
-			this._scene.removeChildren();
+			if(this._scene) this._scene.removeChildren();
 			this._scene = null;
 			super.close();
 		}

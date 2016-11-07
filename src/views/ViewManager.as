@@ -9,6 +9,7 @@ package views
 		private var viewvector:Vector.<ViewBase>;
 		private var dic:Dictionary;
 		private var _frameProcessList:Object;
+		private var _currentPanel:ViewBase;
 		public function ViewManager()
 		{
 			viewvector = new Vector.<ViewBase>();
@@ -17,6 +18,12 @@ package views
 			GlobalTimer.instance.pushFunc(frameProcess,10);
 			init();
 		}
+
+		public function get currentPanel():ViewBase
+		{
+			return _currentPanel;
+		}
+
 		private function init():void
 		{
 			//枚举;初始化即开始加载;
@@ -79,6 +86,9 @@ package views
 			
 			viewvector[19] = new LiveView();
 			dic[viewvector[19].panelName] = 19;
+			
+			viewvector[20] = new T3dTestView();
+			dic[viewvector[20].panelName] = 20;
 		}
 		
 		/**
@@ -94,6 +104,7 @@ package views
 			{
 				if(dic[str]==i){
 					viewvector[dic[str]].show(str,args);
+					_currentPanel = viewvector[dic[str]];
 				}else if(viewvector[i].panelName!="ui"&&viewvector[i].isShowing)
 				{
 					viewvector[i].close();

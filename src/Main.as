@@ -1,15 +1,22 @@
 package
 {
 	import com.demonsters.debugger.MonsterDebugger;
+	import com.wg.bitmapdataUtils.BitmapDataUtil;
 	import com.wg.logging.Log;
 	import com.wg.resource.ResourceLoader;
+	import com.wg.utils.arrayUtils.ArrayUtil;
+	import com.wg.utils.systeminfoUtils.SystemInfos;
 	
 	import flash.display.DisplayObject;
+	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
+	import views.DesignTestView;
 	import views.ViewBase;
 	import views.ViewManager;
+	import views.formula.hitest.HitTest_Test;
+	import views.formula.hitest.Pointtest;
 
 	[SWF(width=1200,height=900,frameRate='30')]
 	/**
@@ -34,14 +41,21 @@ package
 			Config.uri = new URI();
 			Config.viewManger = new ViewManager();
 			Context.getInstance().initialize(this,"1.2.3.5000","false","false");
-			
+			DesignTestView.ZipLoader();
 			Config.viewManger.showPanel("ui",1,2,3);//主界面;只执行一次;
 			Config.viewManger.showPanel("stimliLoad");
 			this.addEventListener(Event.ADDED_TO_STAGE,function (e:Event):void{
 				
 			});
-		/*	MonsterDebugger.initialize(this);
-			MonsterDebugger.trace(this, "Hello Monster dsFlashClient cn");*/
+			MonsterDebugger.initialize(this);
+			MonsterDebugger.trace(this, "Hello Monster dsFlashClient cn");
+			SystemInfos._stage = this.stage;
+			SystemInfos.showInfo();
+			var pointtest:Pointtest = new Pointtest();
+			
+			
+			
+			
 		}
 		
 		

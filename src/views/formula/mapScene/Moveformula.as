@@ -30,7 +30,7 @@ package views.formula.mapScene
 		{
 			// TODO Auto-generated method stub
 			_content.removeEventListener(Event.ADDED_TO_STAGE,addToStage);
-			_content.addEventListener(Event.ENTER_FRAME,enterFrameHandler);
+//			_content.addEventListener(Event.ENTER_FRAME,enterFrameHandler);
 			_content.start_btn.addEventListener(MouseEvent.CLICK,onstartHandler);
 			_content.play_era.addEventListener(MouseEvent.CLICK,onmoveAeraHandler);
 			_content.zhezhao_mc.x = _content.play_era.x;
@@ -122,6 +122,7 @@ package views.formula.mapScene
 		 */
 		private function onmoveAeraHandler(e:MouseEvent):void
 		{
+			_content.addEventListener(Event.ENTER_FRAME,enterFrameHandler);
 			var temppoint:Point = _content.play_era.globalToLocal(new Point(_content.stage.mouseX,_content.stage.mouseY));
 //			trace(_content.stage.mouseX,_content.parent.mouseX,_content.mouseX,_content.play_era.mouseX);
 			_content.zhongdian_text.text = String(temppoint.x.toFixed(2))+","+String(temppoint.y.toFixed(2));
@@ -234,6 +235,7 @@ package views.formula.mapScene
 			
 			_areadyMovePoint.x = 0;
 			_areadyMovePoint.y = 0;
+			_content.removeEventListener(Event.ENTER_FRAME,enterFrameHandler);
 		}
 		
 		//==============player移动区域的计算;================

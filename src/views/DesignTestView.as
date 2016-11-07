@@ -15,9 +15,9 @@ package views
 	public class DesignTestView extends ViewBase
 	{
 //		private var design:Design;
-		private var _files:Vector.<Loader>;
-		private var _zip:FZip;
-		private var design:Design;
+		private static var _files:Vector.<Loader>;
+		private static var _zip:FZip;
+		private static var design:Design;
 		public function DesignTestView()
 		{
 			panelName = "designtest";
@@ -32,10 +32,10 @@ package views
 				this.addChild(content);
 				
 			}
-			ZipLoader();
+			if(!Config.design) ZipLoader();
 			super.render();
 		}
-		public function ZipLoader():void {
+		public static function ZipLoader():void {
 			_files = new Vector.<Loader>();
 			_zip = new FZip();
 			_zip.addEventListener(FZipEvent.FILE_LOADED, onZipLoading);
@@ -43,18 +43,19 @@ package views
 			_zip.load(new URLRequest("assets/data/desginData.zip"));
 		}
 		
-		private function onZipLoading(event : FZipEvent) : void {
+		private static function onZipLoading(event : FZipEvent) : void {
 			trace("名称:"+event.file.filename)//"\n内容:"+event.file.content+"\n");
 			if(event.file.filename == "Npc.json") trace("\n内容:"+event.file.content+"\n");
 		}
 		
-		private function onZipComplete(event : Event) : void {
+		private static function onZipComplete(event : Event) : void {
 			trace("加载ZIP完成");
 			trace("ZIP文件中文件总数：" + _zip.getFileCount());
 			if(!design) design = new Design(new URI(),null,_zip);
 			Config.design = design;
 			var npc:Npc = design.load(mydesigndatas.logic.Npc,830001);
-			content.info_ta.text = npc.toString();
+			trace(npc.toString());
+			//content.info_ta.text = npc.toString();
 		}
 		
 		override protected function dispose():void
