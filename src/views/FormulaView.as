@@ -12,6 +12,14 @@ package views
 	import views.formula.basicAnimate.BasicAnmateMC;
 	import views.formula.hitest.HitTest_Test;
 	import views.formula.mapScene.Moveformula;
+	import views.formula.tanhuangmove.BallMC;
+	import views.formula.tanhuangmove.BallMC2;
+	import views.formula.tanhuangmove.BallMC3;
+	import views.formula.tanhuangmove.BallMC4;
+	import views.formula.tanhuangmove.Tanhuangmanager;
+	import views.formula.tanhuangmove.Tanhuangmanager2;
+	import views.formula.tanhuangmove.Tanhuangmanager3;
+	import views.formula.tanhuangmove.Tanhuangmanager4;
 
 	public class FormulaView extends ViewBase
 	{
@@ -34,9 +42,14 @@ package views
 				content.mainBtn3.addEventListener(MouseEvent.CLICK,aStarHandler);
 				content.mainBtn4.addEventListener(MouseEvent.CLICK,basicAnimHandler);
 				content.mainBtn5.addEventListener(MouseEvent.CLICK,basicHitHandler);
+				content.mainBtn6.addEventListener(MouseEvent.CLICK,tanhuangMoveHandler);
 				map1cls = Config.resourceLoader.getClass("sanjiaocomp",panelName);
 				map2cls = Config.resourceLoader.getClass("movecomp",panelName);
 				map3cls = Config.resourceLoader.getClass("basicanimcomp",panelName);
+				BallMC.Ball = Config.resourceLoader.getClass("ball",panelName);
+				BallMC2.Ball = Config.resourceLoader.getClass("ball",panelName);
+				BallMC3.Ball = Config.resourceLoader.getClass("ball",panelName);
+				BallMC4.Ball = Config.resourceLoader.getClass("ball",panelName);
 				//map3cls = Config.resourceLoader.getClass("basicanimcomp",panelName);
 			}
 			super.render();
@@ -119,11 +132,37 @@ package views
 		 * 
 		 */
 		private var hitTest_test:HitTest_Test;
+		
 		private function basicHitHandler(e:MouseEvent):void
 		{
 			content.content.removeChildren();
 			if(!hitTest_test) hitTest_test = new HitTest_Test();
 			content.content.addChild(hitTest_test);
 		}
+		
+		/**
+		 *弹簧运动 
+		 * @param e
+		 * 
+		 */
+		private var tanhuangmanager:Tanhuangmanager4;
+		private function tanhuangMoveHandler(e:MouseEvent):void
+		{
+			content.content.removeChildren();
+			if(!tanhuangmanager) tanhuangmanager = new Tanhuangmanager4();
+			content.content.addChild(tanhuangmanager);
+			tanhuangmanager.startMove();
+		}
+		
+		override protected function dispose():void
+		{
+			if(tanhuangmanager)
+			{
+				tanhuangmanager.dispose();
+				content.content.removeChild(tanhuangmanager);
+				tanhuangmanager = null;
+			}
+		}
 	}
+	
 }

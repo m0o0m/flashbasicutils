@@ -1,13 +1,21 @@
 package views.formula.basicAnimate
 {
+	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.geom.Point;
 
 	public class DrawLine
 	{
 		public function DrawLine()
 		{
 		}
+		/**
+		 *正弦函数 
+		 * @param long
+		 * @return 
+		 * 
+		 */
 		public static function DrawSinLine(long:Number = 360):Sprite
 		{
 			var sprite:Sprite = new Sprite();
@@ -87,6 +95,64 @@ package views.formula.basicAnimate
 					sprite.removeEventListener(Event.ENTER_FRAME,drawLineHandler);
 				}
 			}
+		}
+		public static function drawSquareWithData(data:Number,drawmc:MovieClip = null):MovieClip
+		{
+			var width:Number = 5;
+			if(!drawmc)
+			{
+				drawmc = new MovieClip();
+				drawmc.graphics.lineStyle(1,0xff0000);
+				drawmc.nowPoint = 0;
+			}
+			drawmc.nowPoint +=width; 
+			drawmc.graphics.drawRect(drawmc.nowPoint,0,width,data);
+			return drawmc;
+			
+		}
+		private static var  listenerArr:Array = new Array();
+		public static function addEventListener(mc:MovieClip,type:String,func:Function):void
+		{
+			var tempArr:Array = new Array(3);
+			tempArr[0] = mc;
+			tempArr[1] = type;
+			tempArr[2] = func;
+			mc.addEventListener(type,func);
+			listenerArr.push(tempArr);
+		}
+		public static function removeAllListener(mc:MovieClip):void
+		{
+			for(var i:int =0;i<listenerArr.length;i++)
+			{
+				if(listenerArr[i][0]==mc)
+				{
+					mc.removeEventListener(listenerArr[i][1],listenerArr[i][2]);
+				}
+			}
+		}
+		
+		public static function drawSimpleLine(mc:MovieClip):void
+		{
+			if(!mc.verticalLine){
+				var sprite:Sprite = new Sprite();
+				sprite.graphics.lineStyle(1,0x00ff00);
+				
+				sprite.graphics.moveTo(0,-300);
+				sprite.graphics.lineTo(0, 300);
+				mc.verticalLine  =sprite;
+				mc.addChild(sprite);
+			}
+			addEventListener(mc,Event.ENTER_FRAME,lineFollow);
+		}
+		
+		private static function lineFollow(e:Event):void
+		{
+			var mc:MovieClip =e.currentTarget as MovieClip; 
+			trace("=================================================");
+			if(!mc.stage) return;
+			var temppoint:Point = mc.globalToLocal(new Point(mc.stage.mouseX,mc.stage.mouseY));
+			mc.verticalLine.x = temppoint.x;
+			mc.verticalLine.y = temppoint.y;
 		}
 		
 	}
