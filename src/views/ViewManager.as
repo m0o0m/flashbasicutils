@@ -89,13 +89,16 @@ package views
 			
 			viewvector[20] = new T3dTestView();
 			dic[viewvector[20].panelName] = 20;
+			
+			viewvector[21] = new LvJingView();
+			dic[viewvector[21].panelName] = 21;
 		}
 		
 		/**
 		 *需要添加面板共存规则,创建层级概念; 
 		 * @param str
 		 * @param args
-		 * 
+		 * 	
 		 */
 		public function showPanel(str:String,...args):void
 		{

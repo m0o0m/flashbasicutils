@@ -11,21 +11,20 @@ package com.wg.ui.button
 	
 	import com.wg.ui.interfaces.IUI2;
 	
-	import org.osmf.media.DefaultMediaFactory;
 	
 	/**
 	 *所有的按钮都需要手动init和手动dispose(); 
 	 * 可转化为按钮组,checkbox,radiobox,通过设置不同的属性值;
+	 * 
+	 * littlebutton 有四帧,normal/mouseout mouseover mousedown lock 
 	 * @author Allen
 	 * 
 	 */
 	public class LittleButton implements IUI2
 	{
 
-
 		public var clickFunc:Function;//按钮点击响应的事件回调;
 		private var _state:String;//根据状态值设定;
-		public var gameType:String = "";//保存彩种的常量或子彩种的名称;
 		private var _value:*;//给按钮赋值,传递使用;
 
 		private var _title:String;//按钮的标题
@@ -34,18 +33,30 @@ package com.wg.ui.button
 		public static const ALREADYCLICK:String = "alreadyclick";
 		public static const UNCLICK:String = "unclick";
 		
-		//记录是否是点击;
+		
+		/**
+		 * //记录是否是点击状态;
+		 */
 		protected var isClick:Boolean = false;
 		
-		//按钮的锁定状态;
+		
+		/**
+		 * //按钮的锁定状态;
+		 */
 		private var _isLock:Boolean = false;
 		
-		//是否设置文本颜色;
+		
+		/**
+		 * //是否设置文本颜色;
+		 */
 		private var _canSetTextColor:Boolean;
 		private var _firstTxtColor:int;
 		private var _secondTxtColor:int;
 		
-		//设置是否可拥有点击状态保持;
+		
+		/**
+		 * //设置是否可拥有点击状态保持;
+		 */
 		public var hasClickState:Boolean = true;
 		
 		public function set isLock(value:Boolean):void
@@ -243,6 +254,7 @@ package com.wg.ui.button
 			removeListener();
 			content = null;
 			clickFunc = null;
+			_value = null;
 		}
 		
 		private function mouseOverHandler(event:MouseEvent):void

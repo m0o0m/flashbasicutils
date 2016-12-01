@@ -1,6 +1,8 @@
 package com.wg.ui.button
 {
+	import flash.display.Bitmap;
 	import flash.display.MovieClip;
+
 	/**
 	 * 
 	 * @author Allen
@@ -9,11 +11,20 @@ package com.wg.ui.button
 	public class RichLittleButton extends LittleButton
 	{
 		private var _picsMc:MovieClip;
-		private var _picIndex:uint;
-		public function RichLittleButton(con:MovieClip, tit:String,__picsMc:MovieClip)
+		private var _picIndex:uint = 1;
+		public function RichLittleButton(con:MovieClip, tit:String,__picsMc:*)
 		{
 			super(con, tit);
-			_picsMc = __picsMc;
+			if(__picsMc is Bitmap)
+			{
+				var mc:MovieClip = new MovieClip();
+				mc.addChild(__picsMc);
+				_picsMc = mc;
+			}else
+			{
+				_picsMc = __picsMc;
+			}
+			
 		}
 
 		public function set picIndex(value:uint):void

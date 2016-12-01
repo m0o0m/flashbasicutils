@@ -1,4 +1,4 @@
-package views.formula
+package views.formula.sanjiao
 {
 	import flash.display.MovieClip;
 	import flash.display.PixelSnapping;

@@ -17,6 +17,31 @@ package views
 	import flash.display.MovieClip;
 	import flash.text.TextField;
 
+	/**
+	 * LittleButton 简单按钮
+	 * 1.isLock 设置锁定
+	 * 2.title	设置按钮title
+	 * 3.state	读取按钮的点击状态
+	 * 4.value	按钮的赋值,可以存储任何类型的值
+	 * 5.clickFunc	指定按钮点击后执行的回调函数
+	 * 6.setTxtColor()	设置按钮文本的颜色
+	 * 7.setTxtFormat()	设置文本的格式
+	 * 8.hasClickState	设置按钮是否拥有点击状态
+	 * 
+	 * 
+	 * LittleGroupButton 按钮组中的按钮
+	 * 1.groupId	保存此按钮属于的组名称
+	 * 
+	 * 
+	 * LittleCheckBox	选择框
+	 * 
+	 * 
+	 * RichLittleButton	可设置图片的按钮
+	 * 
+	 * 
+	 * @author Administrator
+	 * 
+	 */
 	public class MyUIView extends ViewBase
 	{
 		public function MyUIView()
@@ -64,7 +89,7 @@ package views
 			for (var i:int = 0; i < nameArr.length; i++) 
 			{
 				var tempbtn:LittleGroupButton = new LittleGroupButton(content.tabbuttons["btn"+i],nameArr[i]);
-				tempbtn.gameType = "test";
+				tempbtn.groupId = "test";
 				tempbtn.init();
 			}
 			ButtonGroupManger.instance.changeState(tempbtn);
@@ -85,7 +110,7 @@ package views
 			for (var i2:int = 0; i2 < 6; i2++) 
 			{
 				var tempbtn:LittleGroupButton = new LittleGroupButton(content.topbtn2_mc["btn"+i2],i2.toString());
-				tempbtn.gameType = "test2";
+				tempbtn.groupId = "test2";
 				tempbtn.init();
 			}
 			ButtonGroupManger.instance.changeState(tempbtn);

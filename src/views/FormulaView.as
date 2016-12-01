@@ -7,7 +7,7 @@ package views
 	import fl.controls.CheckBox;
 	import fl.controls.LabelButton;
 	
-	import views.formula.Sanjiao;
+	import views.formula.sanjiao.Sanjiao;
 	import views.formula.AStar.GridView;
 	import views.formula.basicAnimate.BasicAnmateMC;
 	import views.formula.hitest.HitTest_Test;
