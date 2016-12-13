@@ -17,7 +17,7 @@
 	import flash.utils.setTimeout;
 	
 	import views.lvjing.yanhua.AbstractLvjing;
-	import views.lvjing.yanhua3.geom.BlendModeUtil;
+	import wg.utils.colorUtils.BlendModeUtil;
 	import views.lvjing.yanhua3.particle.core.AbstractParticle;
 
 	[SWF(backgroundColor="#000000")]

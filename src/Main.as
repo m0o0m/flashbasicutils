@@ -1,7 +1,6 @@
 package
 {
 	import com.demonsters.debugger.MonsterDebugger;
-	import com.wg.bitmapdataUtils.BitmapDataUtil;
 	import com.wg.logging.Log;
 	import com.wg.resource.ResourceLoader;
 	import com.wg.utils.arrayUtils.ArrayUtil;

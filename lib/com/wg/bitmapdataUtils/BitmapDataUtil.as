@@ -8,6 +8,7 @@ package com.wg.bitmapdataUtils
 	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
+	import flash.geom.ColorTransform;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import flash.utils.ByteArray;
@@ -68,6 +69,24 @@ package com.wg.bitmapdataUtils
 			
 			f = new File(f.resolvePath("a.png").nativePath);   f.save(pngStream,"a.png");*/  
 			return mBit;
+		}
+		
+		public static function fanse(ds:DisplayObject):void
+		{
+			/*
+			red(dst) = red(src) * (-1) + 255。
+			green(dst) = green(src) * (-1) + 255
+			blue(dst) = blue(src) * (-1) + 255
+			*/
+			//注意BlendMode的使用造成的计算影响;
+			var _myColorTransform:ColorTransform = new ColorTransform();
+			_myColorTransform.redMultiplier = -1;
+			_myColorTransform.greenMultiplier =-1;
+			_myColorTransform.blueMultiplier = -1;
+			_myColorTransform.redOffset = 255;
+			_myColorTransform.greenOffset = 255;
+			_myColorTransform.blueOffset = 255;
+			ds.transform.colorTransform = _myColorTransform;
 		}
 	}
 }

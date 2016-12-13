@@ -7,6 +7,7 @@ package views
 	import flash.geom.Point;
 	
 	import views.lvjing.Juanji;
+	import views.lvjing.colors.ColorTest;
 	import views.lvjing.yanhua.Yanhua;
 	import views.lvjing.yanhua2.Fireworks;
 	import views.lvjing.yanhua3.Fireworks3;
@@ -32,6 +33,7 @@ package views
 			content.btn2.addEventListener(MouseEvent.CLICK,yanhuaHandler);
 			content.btn3.addEventListener(MouseEvent.CLICK,yanhua2Handler);
 			content.btn4.addEventListener(MouseEvent.CLICK,yanhua3Handler);
+			content.btn5.addEventListener(MouseEvent.CLICK,colortestHandler);
 			super.render();
 			
 		}
@@ -59,12 +61,21 @@ package views
 		}
 		
 		private var yanhua3:Fireworks3;
+		
 		protected function yanhua3Handler(event:MouseEvent):void
 		{
 			// TODO Auto-generated method stub
 			reset();
 			if(!yanhua3) yanhua3 = new Fireworks3(content.scene_mc);
 		}
+		
+		private var colortest:ColorTest;
+		private function colortestHandler(event:MouseEvent):void
+		{
+			reset();
+			if(!colortest) colortest = new ColorTest(content);
+		}
+		
 		private function reset():void
 		{
 			if(juanji)
@@ -87,6 +98,11 @@ package views
 			{
 				yanhua3.reset();
 				yanhua3 = null;
+			}
+			if(colortest)
+			{
+				colortest.reset();
+				colortest = null;
 			}
 			content.scene_mc.removeChildren();
 		}

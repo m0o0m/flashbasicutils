@@ -1,4 +1,4 @@
-﻿package  views.lvjing.yanhua3.geom
+﻿package  wg.utils.colorUtils
 {
 
 	public class BlendModeUtil
