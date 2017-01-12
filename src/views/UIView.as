@@ -13,12 +13,15 @@ package views
 	 */
 	public class UIView extends ViewBase
 	{
-		private var namevec:Vector.<String> = new Vector.<String>();
+		private var namevec:Vector.<Array> = new Vector.<Array>();
 		private var lanmuGroupArr:Vector.<LittleGroupButton> = new Vector.<LittleGroupButton>;
 		//保存加载的swf的名称,也是默认主mc类的名称;传递给点击按钮的gameType,然后点击时再传给viewmanager
 		//viewmanager根据panelNamevec的字符串对应的索引,找到保存在数组中的view类实例
 		//view的panelName == littlebtn.gametype == swf的名称 == 默认主mc类的类名;
-		private var panelNamevec:Array = ["stimliLoad","myui","ziptest","debuglogic","basicutils","loadswf","layout","mvc","servertest","designtest","scenetest","maptest","simplemap","formulatools","sfsserver","jiami","alertComp","chatComp","videoComp","3dTest","lvjingComp"];
+		/*private var panelNamevec:Array = 
+			["stimliLoad","myui","ziptest","debuglogic","basicutils","loadswf","layout","mvc",
+			"servertest","designtest","scenetest","maptest","simplemap",
+			"formulatools","sfsserver","jiami","alertComp","chatComp","videoComp","3dTest","lvjingComp","erweimaComp"];*/
 		public function UIView()
 		{
 			panelName = "ui";
@@ -26,8 +29,12 @@ package views
 		}
 		override protected function render():void
 		{
-			namevec.push("资源加载","ui组使用","压缩工具","项目日志功能","基本工具","swf加载处理","层级管理",
-				"MVC","网络通讯方式","数值配置文件使用","摄像头,schedule","地图加载","简单地图加载","公式模拟","sfsserver","加密解密","提示框模块","聊天模块","live直播","3d测试","滤镜","对话引导模块-","战斗模块-"
+			namevec.push(["资源加载","stimliLoad"],["ui组使用","myui"],["压缩工具","ziptest"],
+				["项目日志功能","debuglogic"],["基本工具","basicutils"],["swf加载处理","loadswf"],["层级管理","layout"],
+				["MVC","mvc"],["网络通讯方式","servertest"],["数值配置文件使用","designtest"],["摄像头,schedule","scenetest"],
+				["地图加载","maptest"],["简单地图加载","simplemap"],["公式模拟","formulatools"],
+				["sfsserver","sfsserver"],["加密解密","jiami"],["提示框模块","alertComp"],["聊天模块","chatComp"],["live直播","videoComp"],
+				["3d测试","3dTest"],["滤镜","lvjingComp"],["二维码生成","erweimaComp"],["对话引导模块-",""],["战斗模块-",""]
 			);
 			if(!content)
 			{
@@ -44,8 +51,8 @@ package views
 			
 			for (var i:int = 0; i < namevec.length; i++) 
 			{
-				var tempbtn:LittleGroupButton = new LittleGroupButton(content.tabbuttons["btn"+i],namevec[i]);
-				tempbtn.groupId = panelNamevec[i];
+				var tempbtn:LittleGroupButton = new LittleGroupButton(content.tabbuttons["btn"+i],namevec[i][0]);
+				tempbtn.groupId = namevec[i][1];//panelNamevec[i];
 				tempbtn.clickFunc = lanmuClickHandler;
 				tempbtn.init();
 			}

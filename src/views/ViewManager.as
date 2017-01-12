@@ -92,7 +92,11 @@ package views
 			
 			viewvector[21] = new LvJingView();
 			dic[viewvector[21].panelName] = 21;
+			
+			viewvector[22] = new ErweimaView();
+			dic[viewvector[22].panelName] = 22;
 		}
+		
 		
 		/**
 		 *需要添加面板共存规则,创建层级概念; 
