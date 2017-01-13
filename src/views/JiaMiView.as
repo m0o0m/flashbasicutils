@@ -43,11 +43,14 @@ Other Useful Stuff: HMAC, Random, TLS-PRF, some ASN-1/DER parsing
 	/*
 	 * 
 	swf加密解密:
+	解密过程
 	1.Index.swf:处理初始xml,skin.swf(未加密),main.swf(加密)
 	2.Symbol_ClsSymbol.swf:当做元数据绑定到Symbol_ClsSymbol.as并发布进Index.swf中,
 	3.所有加密的swf通过loadApp()的方式加载
-	
-	
+	4.原始加密swf bin-debug/assets/Index.swf JPEXS Free Flash Decompiler工具可以完整反编译
+	加密过程:
+	1.加密工具	SWFEncrypt.exe工具 微云上保存;
+	2.加密方式	根据swf字节长度,按照一定规则打乱字节排序
 	*/
 	public class JiaMiView extends ViewBase
 	{
